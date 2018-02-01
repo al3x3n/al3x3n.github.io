@@ -1,0 +1,1 @@
+var baseUrl= window.location.protocol + "//" + window.location.host + "/redes_gesa";
