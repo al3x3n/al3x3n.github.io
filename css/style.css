@@ -918,6 +918,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   .hero-brand {
     margin-bottom: 35px;
   }
+  .hero-brand img{
+    width:100%;
+    max-width:400px;
+  }
   .tagline {
     margin: 35px 0;
   }
