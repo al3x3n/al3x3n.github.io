@@ -942,6 +942,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
   .hero {
     padding: 75px 0;
+    background-image: url(../images/background/fondo_3.jpg);
+    /*display: block;
+    max-width: 100%;*/
   }
   .stats-col {
     margin-bottom: 25px;
@@ -1133,4 +1136,8 @@ body.mobile-nav-active #mobile-nav-toggle {
     opacity: 0;
     transform: scale(1);
 }
+}
+
+.white_font{
+  color: #fff !important;
 }
