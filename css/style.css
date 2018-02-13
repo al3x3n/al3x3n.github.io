@@ -1041,18 +1041,43 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding: 60px 0;
 }
 
+.carousel-inner img {
+    max-width: 100%;
+    opacity: 0.5;
+    transition: 0.3s;
+    padding: 15px 0;
+}
+
 .indicators{
   margin-top: 15px;
   text-align: center;
 }
 
+.clientes {
+  padding-bottom: 45px;
+}
+
+.clientes h2 {
+  color: #212529;
+}
+
 #clients .owl-dot {
-    background-color: #fff;
-        bottom: -50px !important;
+  background-color: #fff;
+  bottom: -50px !important;
 }
 .carousel-indicators .active {
-    background-color: #18d26e !important;
+  background-color: #007bff !important;
 }
+.carousel-indicators.carousel-control-prev{
+  background-color: #007bff !important;
+}
+.carousel-indicators.carousel-control-next{
+  background-color: #007bff !important;
+}
+#clients img:hover{
+  opacity: 1;
+}
+
 /* ============================================================================================================================================================
   Responsive Styling
   ========================================================================================================================================================== */
@@ -1097,6 +1122,9 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding: 35px 0;
   }
   .features {
+    padding-bottom: 5px;
+  }
+  .clientes {
     padding-bottom: 5px;
   }
   p,
