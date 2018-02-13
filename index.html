@@ -71,7 +71,6 @@
 			</script>
 		<!--End of Zendesk Chat Script-->
 
-		
 	  	<!-- Required JavaScript Libraries -->
 			<script src="lib/jquery/jquery.min.js"></script>
 		  	<script src="lib/jquery/jquery-migrate.min.js"></script>
@@ -346,10 +345,13 @@
 		      	<div class="container">
 		        	<div class="row">
 			          	<div class="col-lg-9 col-sm-12 text-lg-left text-center">
-				            <h2>Alguna descripción Extra</h2>
-				            <p>
-				            	Ejemplo
-				            </p>
+				            <!--<h2>Alguna descripción Extra</h2>-->
+				             <a data-html="true" type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover" data-content="<ul><li>GRUPO CONTELMEX</li><li>PEMEX</li><li>CAPUFE</li></ul>">Empresas a las que le hemos dado servicio:</a>
+				             <a type="button" id="popover" class="btn btn-info" data-trigger="hover"  data-toggle="popover"  data-content="" title="">integradores con:</a>
+				             <script type="text/javascript">
+	var image = '<img src="images/empresas.png"">';
+	$('#popover').popover({content: image, html:true});
+</script>
 			          	</div>
 		        	</div>
 		      	</div>
