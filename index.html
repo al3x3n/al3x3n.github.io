@@ -21,6 +21,9 @@
 	  <meta name="twitter:description" content="">
 	  <meta name="twitter:image" content="">
 
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 	  <!-- Favicon -->
 	  <link href="images/favicon.ico" rel="icon">
 
@@ -73,7 +76,7 @@
 			})(document, "script");
 			</script>
 		<!--End of Zendesk Chat Script-->
-
+		
 	  	<!-- Required JavaScript Libraries -->
 			<script src="lib/jquery/jquery.min.js"></script>
 		  	<script src="lib/jquery/jquery-migrate.min.js"></script>
@@ -432,7 +435,7 @@
 									</li>
 								</ul>
 							</div>
-			          	</div>
+			          	<!--</div>-->
 		        	<!--</div>
 		      	</div-->
 		    </section>
@@ -447,7 +450,7 @@
 		        	</p>
 		      	</div>
 
-		      	<div class="portfolio-grid">
+		      	<!--<div class="portfolio-grid">
 		        	<div class="row">
 		          		<div class="col-lg-3 col-sm-6 col-xs-12">
 		            		<div class="card card-block">
@@ -551,7 +554,63 @@
 			            	</div>
 		          		</div>
 		        	</div>
-		      	</div>
+		      	</div>-->
+		      	<div class="w3-content w3-section" style="max-width:500px;">  					
+			        <img class="mySlides w3-animate-fading" src="images/porta/porta_1.jpg" style="width:100%">
+  					<img class="mySlides w3-animate-fading" src="images/porta/porta_2.jpg" style="width:100%">
+  					<img class="mySlides w3-animate-fading" src="images/porta/porta_3.jpg" style="width:100%">
+  					<img class="mySlides w3-animate-fading" src="images/porta/porta_4.jpg" style="width:100%">
+  					<img class="mySlides w3-animate-fading" src="images/porta/porta_5.png" style="width:100%">
+  					<img class="mySlides w3-animate-fading" src="images/porta/porta_6.png" style="width:100%">
+  					<img class="mySlides w3-animate-fading" src="images/porta/porta_7.png" style="width:100%">
+  					<img class="mySlides w3-animate-fading" src="images/porta/porta_8.png" style="width:100%">
+				</div>
+	<!--portafolio-->
+            <script type="text/javascript">           	
+				    var myIndex = 0;
+					carousel();
+
+						function carousel() {
+    						var i;
+    						var x = document.getElementsByClassName("mySlides");
+    						for (i = 0; i < x.length; i++) {
+       						x[i].style.display = "none";  
+    						}
+    						myIndex++;
+    						if (myIndex > x.length) {myIndex = 1}    
+    						x[myIndex-1].style.display="block";  
+    						setTimeout(carousel, 9000);    
+						}
+			</script>
+		<!--end portafolio-->
+				<div class="w3-content w3-section" style="max-width:500px;">  					
+			        <p class="des_sly w3-animate-fading" style="width:100%">camaras de alta calidad1</p>
+  					<p class="des_sly w3-animate-fading" style="width:100%">camaras de alta calidad2</p>
+  					<p class="des_sly w3-animate-fading" style="width:100%">camaras de alta calidad3</p>
+  					<p class="des_sly w3-animate-fading" style="width:100%">camaras de alta calidad4</p>
+  					<p class="des_sly w3-animate-fading" style="width:100%">camaras de alta calidad5</p>
+  					<p class="des_sly w3-animate-fading" style="width:100%">camaras de alta calidad6</p>
+  					<p class="des_sly w3-animate-fading" style="width:100%">camaras de alta calidad7</p>
+  					<p class="des_sly w3-animate-fading" style="width:100%">camaras de alta calidad8</p>
+				</div>
+				<!--portafolio-->
+            <script type="text/javascript">
+    				var myselec = 0;
+					varios();       
+					 	
+						function varios() {
+    						var i;
+    						var x = document.getElementsByClassName("des_sly");
+    						for (i = 0; i < x.length; i++) {
+       						x[i].style.display = "none";  
+    						}
+    						myselec++;
+    						if (myselec > x.length) {myselec = 1}    
+    						x[myselec-1].style.display="block";  
+    						setTimeout(varios, 9000);    
+						}
+			</script>
+		<!--end portafolio--> 
 		    </section>
 	  	<!-- /Portfolio -->
 	</div>
