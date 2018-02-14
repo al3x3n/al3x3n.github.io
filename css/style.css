@@ -1180,7 +1180,6 @@ div }
 }
 
 /*About========================================================================================================================*/
-<<<<<<< HEAD
 #about{
     padding: 60px 0 !important;
 }
@@ -1207,7 +1206,7 @@ div }
     padding-top: 8px;
     text-align: center;
     position: absolute;
-    background-color: #18d26e;
+    background-color: #199EB8;
     border-radius: 50%;
     text-align: center;
     border: 4px solid #fff;
@@ -1221,64 +1220,19 @@ div }
     color: #fff;
     transition: 0.3s;
 }
-#about .about-col:hover i {
-    color: #18d26e;
-}
+
 /*.icon:hover{
   opacity: 0.5;
 }*/
 
-/* ===========================================================================================================================================================
-=======
-  #about{
-      padding: 60px 0 !important;
-  }
-  #about .about-col {
-      background: #fff;
-      border-radius: 0 0 4px 4px;
-      box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
-      margin-bottom: 20px;
-  }
-  #about .about-col .img {
-      position: relative;
-  }
-  #about .about-col h2 {
-      color: #000;
-      text-align: center;
-      font-weight: 700;
-      font-size: 20px;
-      padding: 0;
-      margin: 40px 0 12px 0;
-  }
-  #about .about-col .icon {
-      width: 64px;
-      height: 64px;
-      padding-top: 8px;
-      text-align: center;
-      position: absolute;
-      background-color: #199EB8;
-      border-radius: 50%;
-      text-align: center;
-      border: 4px solid #fff;
-      left: calc( 50% - 32px);
-      bottom: -30px;
-      transition: 0.3s;
-  }
-  #about .about-col i {
-      font-size: 36px;
-      line-height: 1;
-      color: #fff;
-      transition: 0.3s;
-  }
   #about .about-col:hover i {
       color: #199EB8;
   }
   #about .about-col:hover .icon {
     background-color: #fff;
   }
-/*About========================================================================================================================*/
+
 /* ============================================================================================================================================================
->>>>>>> 559dec0192c30668a8177d337c1a6f8fbd661749
   Responsive Styling
   ========================================================================================================================================================== */
 
