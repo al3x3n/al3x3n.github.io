@@ -553,8 +553,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   Call-to-action Styling
   ================================================== */
 .cta {
-  background-color: #199EB8;
+  /*background-color: #199EB8;*/
   padding: 25px 0;
+  opacity: .75;
 }
 
 .cta h2 {
@@ -1362,7 +1363,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     max-height: 508px;
   }
   #slider_empresas{
-    display: none;
+    /*display: none;*/
   }
 }
 
