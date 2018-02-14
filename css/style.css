@@ -35,11 +35,11 @@ h4 {
 /* ==================================================
   General
   ================================================== */
-a {
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
+  a {
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+  }
 
 /* ==================================================
   Elements
@@ -496,6 +496,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 45px;
 }
 
+.col-lg-9{
+    width: 100%;
+    height: 20px;
+}
+
 /* ==================================================
   Features Styling
   ================================================== */
@@ -569,6 +574,93 @@ body.mobile-nav-active #mobile-nav-toggle {
 .cta .btn-ghost {
   position: relative;
   top: 13px;
+}
+
+/* ==================================================
+  empresas servicio
+================================================== */
+
+/**** slider ****/
+
+#slider_empresas  ul{
+  height: 200px;
+}
+
+#slider_empresas{
+  margin: auto;
+  overflow: hidden;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.25);
+  position: relative;
+  width: 640px;
+  height: 100px;
+}
+
+#slider_empresas li{
+  float: left;
+  position: relative;
+  width: 600px;
+  display: inline-block;
+  height: 200px;
+}
+
+#slider_empresas ul{
+  list-style: none;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 9000px;
+  transition: left .3s linear;
+  margin-left: -25px;
+  font-family: century gothic;
+  color: #666;
+}
+
+/*** Content ***/
+
+.slider-container-empresas{
+  margin: 0 auto;
+  padding: 0;
+  width: 550px;
+  min-height: 180px;
+  border-bottom: 1px solid #ccc;
+}
+
+.slider-container-empresas h4{
+  color: #0A7FAD;
+  text-shadow: -1px 0px 0px rgba(0, 0, 0, 0.50);
+}
+
+.slider-container-empresas  p{
+  margin: 10px 25px;
+  line-height: 150%;
+  text-align: justify;
+}
+
+/*** target hooks ****/
+
+@-webkit-keyframes slide-animation {
+  0% {opacity:0;}
+  2% {opacity:1;}
+  20% {left:0px; opacity:1;}
+  22.5% {opacity:0.6;}
+  25% {left:-600px; opacity:1;}
+  45% {left:-600px; opacity:1;}
+  47.5% {opacity:0.6;}
+  50% {left:-1200px; opacity:1;}
+  70% {left:-1200px; opacity:1;}
+  72.5% {opacity:0.6;}
+  75% {left:-1800px; opacity:1;}
+  95% {opacity:1;}
+  98% {left:-1800px; opacity:0;} 
+  100% {left:0px; opacity:0;}
+}
+
+#slider_empresas ul{
+  animation: slide-animation 25s infinite;
 }
 
 /* ==================================================
@@ -1134,7 +1226,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   #about1 .about-col:hover .icon {
     background-color: #fff;
   }
-/*About========================================================================================================================*/
+
 /* ============================================================================================================================================================
   Responsive Styling
   ========================================================================================================================================================== */
@@ -1268,6 +1360,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   .hero{
     height: 115%;
     max-height: 508px;
+  }
+  #slider_empresas{
+    display: none;
   }
 }
 
