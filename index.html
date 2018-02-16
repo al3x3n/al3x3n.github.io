@@ -564,65 +564,80 @@
           </div>
         </div>
 
-        <div class="row" id="">
-          <div class="col-lg-3 col-md-6 portfolio-item filter-app">
-            <a href="">
-              <img src="images/porta/porta_1.jpg" alt="">
+        <div class="row" id="portfolio-wrapper">
+        	<script type="text/javascript">           	
+							    var myIndex = 0;
+								carousel();
+								function carousel() {
+		    						var i;
+		    						var x = document.getElementsByClassName("mySlides");
+		    						for (i = 0; i < x.length; i++) {
+		       						x[i].style.display = "none";  
+		    						}
+		    						myIndex++;
+		    						if (myIndex > x.length) {myIndex = 1}    
+		    						x[myIndex-1].style.display="block";  
+		    						setTimeout(carousel, 9000);    
+								}
+						</script>
+          <div class="col-lg-3 col-md-6 portfolio-item filter-app w3-content w3-section" style="max-width:500px;">
+            
+              <img class="mySlides  w3-animate-fading" src="images/porta/porta_1.jpg" alt="" style="width:100%">
               <div class="details">
                 <h4>App 1</h4>
                 <span>Alored dono par</span>
               </div>
-            </a>
+            
           </div>
 
-          <div class="col-lg-3 col-md-6 portfolio-item filter-web">
-            <a href="">
-              <img src="images/porta/porta_2.jpg" alt="">
+          <div class="col-lg-3 col-md-6 portfolio-item filter-web w3-content w3-section" style="max-width:500px;">
+            
+              <img class="mySlides  w3-animate-fading" src="images/porta/porta_2.jpg" alt="" style="width:100%">
               <div class="details">
                 <h4>Web 2</h4>
                 <span>Alored dono par</span>
               </div>
-            </a>
+            
           </div>
 
-          <div class="col-lg-3 col-md-6 portfolio-item filter-app">
-            <a href="">
-              <img src="images/porta/porta_3.jpg" alt="">
+          <div class="col-lg-3 col-md-6 portfolio-item filter-app w3-content w3-section" style="max-width:500px;">
+            
+              <img  class="mySlides  w3-animate-fading" src="images/porta/porta_3.jpg" alt="" style="width:100%">
               <div class="details">
                 <h4>App 3</h4>
                 <span>Alored dono par</span>
               </div>
-            </a>
+            
           </div>
 
-          <div class="col-lg-3 col-md-6 portfolio-item filter-card">
-            <a href="">
-              <img src="images/porta/porta_4.jpg" alt="">
+          <div class="col-lg-3 col-md-6 portfolio-item filter-card w3-content w3-section" style="max-width:500px;">
+            
+              <img class="mySlides  w3-animate-fading" src="images/porta/porta_4.jpg" alt="" style="width:100%">
               <div class="details">
                 <h4>Card 1</h4>
                 <span>Alored dono par</span>
               </div>
-            </a>
+            
           </div>
 
-          <div class="col-lg-3 col-md-6 portfolio-item filter-card">
-            <a href="">
-              <img src="images/porta/porta_5.png" alt="">
+          <div class="col-lg-3 col-md-6 portfolio-item filter-card w3-content w3-section" style="max-width:500px;">
+            
+              <img class="mySlides  w3-animate-fading" src="images/porta/porta_5.png" alt="" style="width:100%">
               <div class="details">
                 <h4>Card 2</h4>
                 <span>Alored dono par</span>
               </div>
-            </a>
+            
           </div>
 
-          <div class="col-lg-3 col-md-6 portfolio-item filter-web">
-            <a href="">
-              <img src="images/porta/porta_6.png" alt="">
+          <div class="col-lg-3 col-md-6 portfolio-item filter-web w3-content w3-section" style="max-width:500px;">
+           
+              <img class="mySlides  w3-animate-fading" src="images/porta/porta_6.png" alt="" style="width:100%">
               <div class="details">
                 <h4>Web 3</h4>
                 <span>Alored dono par</span>
               </div>
-            </a>
+            
           </div>
 
           <!--<div class="col-lg-3 col-md-6 portfolio-item filter-card">
@@ -645,24 +660,24 @@
             </a>
           </div>-->
 
-         <div class="col-lg-3 col-md-6 portfolio-item filter-logo">
-            <a href="">
-              <img src="images/porta/porta_8.png" alt="">
+         <div class="col-lg-3 col-md-6 portfolio-item filter-logo w3-content w3-section" style="max-width:500px;">
+            
+              <img class="mySlides  w3-animate-fading" src="images/porta/porta_7.png" alt="" style="width:100%">
               <div class="details">
                 <h4>Logo 1</h4>
                 <span>Alored dono par</span>
               </div>
-            </a>
+            
           </div>
 
-          <div class="col-lg-3 col-md-6 portfolio-item filter-logo">
-            <a href="">
-              <img src="images/porta/porta_8.png" alt="">
+          <div class="col-lg-3 col-md-6 portfolio-item filter-logo w3-content w3-section" style="max-width:500px;">
+            
+              <img class="mySlides  w3-animate-fading" src="images/porta/porta_8.png" alt="" style="width:100%">
               <div class="details">
                 <h4>Logo 3</h4>
                 <span>Alored dono par</span>
               </div>
-            </a>
+           
           </div>
 
           <!--<div class="col-lg-3 col-md-6 portfolio-item filter-web">
