@@ -580,10 +580,25 @@
 		    						setTimeout(carousel, 9000);    
 								}
 						</script>
+						  <script type="text/javascript">
+			    			var myselec = 0;
+							varios();       
+							function varios() {
+	    						var i;
+	    						var x = document.getElementsByClassName("des_sly");
+	    						for (i = 0; i < x.length; i++) {
+	       						x[i].style.display = "none";  
+	    						}
+	    						myselec++;
+	    						if (myselec > x.length) {myselec = 1}    
+	    						x[myselec-1].style.display="block";  
+	    						setTimeout(varios, 9000);    
+							}
+						</script>
           <div class="col-lg-3 col-md-6 portfolio-item filter-app w3-content w3-section" style="max-width:500px;">
             
               <img class="mySlides  w3-animate-fading" src="images/porta/porta_1.jpg" alt="" style="width:100%">
-              <div class="details">
+              <div class="details des_sly w3-animate-fading" style="width:100%">
                 <h4>App 1</h4>
                 <span>Alored dono par</span>
               </div>
@@ -593,7 +608,7 @@
           <div class="col-lg-3 col-md-6 portfolio-item filter-web w3-content w3-section" style="max-width:500px;">
             
               <img class="mySlides  w3-animate-fading" src="images/porta/porta_2.jpg" alt="" style="width:100%">
-              <div class="details">
+              <div class="details des_sly w3-animate-fading" style="width:100%">
                 <h4>Web 2</h4>
                 <span>Alored dono par</span>
               </div>
@@ -603,7 +618,7 @@
           <div class="col-lg-3 col-md-6 portfolio-item filter-app w3-content w3-section" style="max-width:500px;">
             
               <img  class="mySlides  w3-animate-fading" src="images/porta/porta_3.jpg" alt="" style="width:100%">
-              <div class="details">
+              <div class="details des_sly w3-animate-fading" style="width:100%">
                 <h4>App 3</h4>
                 <span>Alored dono par</span>
               </div>
@@ -613,7 +628,7 @@
           <div class="col-lg-3 col-md-6 portfolio-item filter-card w3-content w3-section" style="max-width:500px;">
             
               <img class="mySlides  w3-animate-fading" src="images/porta/porta_4.jpg" alt="" style="width:100%">
-              <div class="details">
+              <div class="details des_sly w3-animate-fading" style="width:100%">
                 <h4>Card 1</h4>
                 <span>Alored dono par</span>
               </div>
@@ -623,7 +638,7 @@
           <div class="col-lg-3 col-md-6 portfolio-item filter-card w3-content w3-section" style="max-width:500px;">
             
               <img class="mySlides  w3-animate-fading" src="images/porta/porta_5.png" alt="" style="width:100%">
-              <div class="details">
+              <div class="details des_sly w3-animate-fading" style="width:100%">
                 <h4>Card 2</h4>
                 <span>Alored dono par</span>
               </div>
@@ -633,7 +648,7 @@
           <div class="col-lg-3 col-md-6 portfolio-item filter-web w3-content w3-section" style="max-width:500px;">
            
               <img class="mySlides  w3-animate-fading" src="images/porta/porta_6.png" alt="" style="width:100%">
-              <div class="details">
+              <div class="details des_sly w3-animate-fading" style="width:100%">
                 <h4>Web 3</h4>
                 <span>Alored dono par</span>
               </div>
@@ -663,7 +678,7 @@
          <div class="col-lg-3 col-md-6 portfolio-item filter-logo w3-content w3-section" style="max-width:500px;">
             
               <img class="mySlides  w3-animate-fading" src="images/porta/porta_7.png" alt="" style="width:100%">
-              <div class="details">
+              <div class="details des_sly w3-animate-fading" style="width:100%">
                 <h4>Logo 1</h4>
                 <span>Alored dono par</span>
               </div>
@@ -673,7 +688,7 @@
           <div class="col-lg-3 col-md-6 portfolio-item filter-logo w3-content w3-section" style="max-width:500px;">
             
               <img class="mySlides  w3-animate-fading" src="images/porta/porta_8.png" alt="" style="width:100%">
-              <div class="details">
+              <div class="details des_sly w3-animate-fading" style="width:100%">
                 <h4>Logo 3</h4>
                 <span>Alored dono par</span>
               </div>
