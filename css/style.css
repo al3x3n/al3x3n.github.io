@@ -162,6 +162,14 @@ a:hover {
 	color: #fff;
 }
 
+.col-md-12 h1:hover{
+	color:  #0000FF;
+}
+
+.tagline:hover{
+   color:  #0000FF;
+}
+
 @media (max-width: 768px) {
   .hero {
     background-image: url(../images/background/image_5.jpg);
@@ -231,6 +239,9 @@ a:hover {
   color: rgba(255, 255, 255, 0.75);
 }
 
+.container p span{
+	color: #FF8000;
+}
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -624,13 +635,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin: auto;
   overflow: hidden;
   padding: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 5px solid #0000FF;
   margin-top: 10px;
-  border-radius: 10px;
-  box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.25);
+  border-radius: 80px 0px 80px 0px;
   position: relative;
   width: 640px;
   height: 100px;
+  background: linear-gradient(to right, #00BFFF , white);
+  box-shadow: 5px 10px 18px black;
 }
 
 #slider_empresas li{
@@ -664,7 +676,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .slider-container-empresas h4{
-  color: #0A7FAD;
+  color: black;
   text-shadow: -1px 0px 0px rgba(0, 0, 0, 0.50);
 }
 
@@ -672,6 +684,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin: 10px 25px;
   line-height: 150%;
   text-align: justify;
+  color: black;
 }
 
 /*** target hooks ****/
@@ -737,7 +750,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #portfolio #portfolio-flters li:hover, #portfolio #portfolio-flters li.filter-active {
-  background: #2dc997;
+  background: #01A9DB;
   color: #fff;
 }
 
@@ -763,7 +776,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #portfolio .portfolio-item .details {
   height: 50px;
-  background: #2dc997;
+  background: #01A9DB;
   position: absolute;
   width: 100%;
   height: 50px;
