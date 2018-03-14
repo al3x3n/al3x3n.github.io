@@ -176,6 +176,105 @@ a:hover {
   }
 }
 
+.animated { 
+    -webkit-animation-duration: 5s; 
+    animation-duration: 5s; 
+    -webkit-animation-fill-mode: both; 
+    animation-fill-mode: both; 
+}
+
+.fadeInUp, .fadeInDown{
+    opacity:0;
+    -webkit-transform: translateX(400px); 
+    transform: translateX(400px);
+    animation-duration: 5s; 
+}
+
+/*************
+* FadeInDown *
+*************/
+
+@-webkit-keyframes fadeInDown { 
+    0% { 
+        opacity: 0; 
+        -webkit-transform: translateY(-400px); 
+    } 
+    50%{
+       opacity: 0.3; 
+    }
+    100% { 
+        opacity: 1; 
+        -webkit-transform: translateY(0); 
+    } 
+} 
+@keyframes fadeInDown { 
+    0% { 
+        opacity: 0; 
+        transform: translateY(-400px); 
+    } 
+    50%{
+       opacity: 0.3; 
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    } 
+} 
+.fadeInDown{ 
+    opacity: 0; 
+    -webkit-transform: translateY(-400px); 
+    transform: translateY(-400px);
+    animation-duration: 5s;
+}
+.fadeInDown.go { 
+    -webkit-animation-name: fadeInDown; 
+    animation-name: fadeInDown;
+    animation-duration: 5s;
+}
+
+/*************
+* FadeInUp *
+*************/
+
+@-webkit-keyframes fadeInUp { 
+    0% { 
+        opacity: 0; 
+        -webkit-transform: translateY(400px); 
+    } 
+    50%{
+       opacity: 0.3; 
+    }
+    100% { 
+        opacity: 1; 
+        -webkit-transform: translateY(0); 
+    } 
+} 
+@keyframes fadeInUp { 
+    0% { 
+        opacity: 0; 
+        transform: translateY(400px); 
+    } 
+    50%{
+       opacity: 0.3; 
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    } 
+} 
+.fadeInUp{ 
+    opacity: 0; 
+    -webkit-transform: translateY(400px); 
+    transform: translateY(400px);
+    animation-duration: 5s;
+}
+.fadeInUp.go { 
+    -webkit-animation-name: fadeInUp; 
+    animation-name: fadeInUp; 
+    animation-duration: 5s;
+}
+
+
 /* ==================================================
   Header Styling
 ================================================== */

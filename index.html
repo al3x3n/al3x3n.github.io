@@ -46,8 +46,6 @@
 		  		<link href="css/estilos.css" rel="stylesheet">
 	  	<!-- Css -->
 	  	<!-- Js -->
-	  	    <!--portafolio-->
-	  	        <script src="js/main.js"></script>
 		  	<!-- Required JavaScript Libraries -->
 				<script src="lib/jquery/jquery.min.js"></script>
 			  	<script src="lib/jquery/jquery-migrate.min.js"></script>
@@ -62,6 +60,8 @@
 			  	<script src="lib/stickyjs/sticky.js"></script>
 			  	<script src="lib/parallax/parallax.js"></script>
 				<script src="lib/easing/easing.min.js"></script>
+			<!--portafolio-->
+	  	        <script src="js/main.js"></script>
 			<!-- mensajes emergentes -->
 			  	<script src="js/toastr/toastr.js"></script>
 			  	<link href="js/toastr/build/toastr.css" rel="stylesheet"/>
@@ -118,17 +118,39 @@
 			<section class="hero" id="hero">
 				<div class="container text-center">
 					<div class="row">
-					    <div class="col-md-12">
+					    <div class="col-md-12" inner>
 					      <img class="hero-brand" alt="Redes Gesa" src="images/redes_gesa_2.png">
 					    </div>
 					</div>
-				  	<div class="col-md-12">
-				    	<h1>
+	  	<div class="col-md-12 animatedParent">
+				    	<h1 class="animated fadeInDown go">
 					        Una empresa con personalidad
 				      	</h1>
-					    <p class="tagline">
+					    <p class="tagline animated fadeInUp go">
 					      	Soluciones para tu instalación.
 					    </p>
+					    <script type="text/javascript">
+            
+           					$(function(){
+  								$('.hero').mouseenter(function(){
+    							var $p = $("h1.animated");
+    							$p.addClass("fadeInDown");
+    							$('.hero').mouseleave(function(){
+    							$p.removeClass("fadeInDown");
+     							});
+     							});
+ 							});
+
+ 							$(function(){
+     							$('.hero').mouseenter(function(){
+     							var $b = $("p.animated"); 
+    							$b.addClass("fadeInUp");
+    							$('.hero').mouseleave(function(){
+    							$b.removeClass("fadeInUp");
+     							});  
+  								});
+							});
+        				</script>
 					    <a class="btn btn-full" href="#about">
 					    	Comienza ahora
 					    </a>
@@ -174,9 +196,30 @@
 			      <h2>
 			          Acerca de nosotros
 			        </h2>
-			      <p align="justify">
+			      <p align="justify" class="fade-scroll">
 			      	Somos una empresa 100% mexicana que inició operaciones en 1989 en el estado de Aguascalientes, Ags. Con un contrato por parte de CONSTRUCCIONES TELEFÓNICAS MEXICANA, S.A. DE C.V. para hacernos cargo de una parte del programa de Redes de TEL-MEX. En ese tiempo se realizaron obras de redes principalmente en los estados de Aguascalientes y Zacatecas. Nos especializamos en los servicios de Cableado Estructurado Voz-Datos, Redes de Fibra Óptica, Telefonía Convencional, Soporte Técnico en Redes LAN, Servicio Preventivo, Instalaciones Eléctricas de Energía Regulada, Sistemas de Seguridad. Ademas de que somos <span>PARNER DE CISCO.</span>
 			      </p>
+			      <script type="text/javascript">
+            
+            $(function() {
+                
+                var documentEl = $(document),
+                    fadeElem = $('.fade-scroll');
+                
+                documentEl.on('scroll', function() { 
+                    var currScrollPos = documentEl.scrollTop();
+                    
+                    fadeElem.each(function() {
+
+                        var $this = $(this),                       
+                            elemOffsetTop = $this.offset().top;                           
+                        if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/400);
+                    }); 
+                });
+                
+            });
+        
+        </script>
 			      <div class="row stats-row">
 			        <div class="stats-col text-center col-md-3 col-sm-6">
 			        	<div class="circle">
@@ -200,7 +243,7 @@
 			        </div>
 			      </div>
 			    </div>
-		  	</section>
+		  	</section>			
 		    <section id="about1">
 		      	<div class="container">
 		         	<div class="container text-center">

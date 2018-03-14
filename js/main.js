@@ -1,4 +1,4 @@
-jQuery(document).ready(function( $ ) {
+$("document").ready(function( $ ) {
 
     // Porfolio filter
   $("#portfolio-flters li").click ( function() {
