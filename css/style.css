@@ -183,7 +183,7 @@ a:hover {
     animation-fill-mode: both; 
 }
 
-.fadeInUp, .fadeInDown{
+.Up, .Down{
     opacity:0;
     -webkit-transform: translateX(400px); 
     transform: translateX(400px);
@@ -194,7 +194,7 @@ a:hover {
 * FadeInDown *
 *************/
 
-@-webkit-keyframes fadeInDown { 
+@-webkit-keyframes Down { 
     0% { 
         opacity: 0; 
         -webkit-transform: translateY(-400px); 
@@ -207,7 +207,7 @@ a:hover {
         -webkit-transform: translateY(0); 
     } 
 } 
-@keyframes fadeInDown { 
+@keyframes Down { 
     0% { 
         opacity: 0; 
         transform: translateY(-400px); 
@@ -220,15 +220,15 @@ a:hover {
         transform: translateY(0); 
     } 
 } 
-.fadeInDown{ 
+.Down{ 
     opacity: 0; 
     -webkit-transform: translateY(-400px); 
     transform: translateY(-400px);
     animation-duration: 5s;
 }
-.fadeInDown.go { 
-    -webkit-animation-name: fadeInDown; 
-    animation-name: fadeInDown;
+.Down.go { 
+    -webkit-animation-name: Down; 
+    animation-name: Down;
     animation-duration: 5s;
 }
 
@@ -236,7 +236,7 @@ a:hover {
 * FadeInUp *
 *************/
 
-@-webkit-keyframes fadeInUp { 
+@-webkit-keyframes Up { 
     0% { 
         opacity: 0; 
         -webkit-transform: translateY(400px); 
@@ -249,7 +249,7 @@ a:hover {
         -webkit-transform: translateY(0); 
     } 
 } 
-@keyframes fadeInUp { 
+@keyframes Up { 
     0% { 
         opacity: 0; 
         transform: translateY(400px); 
@@ -262,15 +262,15 @@ a:hover {
         transform: translateY(0); 
     } 
 } 
-.fadeInUp{ 
+.Up{ 
     opacity: 0; 
     -webkit-transform: translateY(400px); 
     transform: translateY(400px);
     animation-duration: 5s;
 }
-.fadeInUp.go { 
-    -webkit-animation-name: fadeInUp; 
-    animation-name: fadeInUp; 
+.Up.go { 
+    -webkit-animation-name: Up; 
+    animation-name: Up; 
     animation-duration: 5s;
 }
 

@@ -246,28 +246,28 @@
 					    </div>
 					</div>
 	  				<div class="col-md-12 animatedParent">
-				    	<h1 class="animated fadeInDown go">
+				    	<h1 class="animated Down go">
 					        Una empresa con personalidad
 				      	</h1>
-					    <p class="tagline animated fadeInUp go">
+					    <p class="tagline animated Up go">
 					      	Soluciones para tu instalación.
 					    </p>
 					    <script type="text/javascript">
            					$(function(){
   								$('.hero').mouseenter(function(){
     							var $p = $("h1.animated");
-    							$p.addClass("fadeInDown");
+    							$p.addClass("Down");
     							$('.hero').mouseleave(function(){
-    							$p.removeClass("fadeInDown");
+    							$p.removeClass("Down");
      							});
      							});
  							});
  							$(function(){
      							$('.hero').mouseenter(function(){
      							var $b = $("p.animated"); 
-    							$b.addClass("fadeInUp");
+    							$b.addClass("Up");
     							$('.hero').mouseleave(function(){
-    							$b.removeClass("fadeInUp");
+    							$b.removeClass("Up");
      							});  
   								});
 							});
@@ -582,7 +582,7 @@
 		    						}
 		    						myIndex++;
 		    						if (myIndex > x.length) {myIndex = 1}    
-		    						//x[myIndex-1].style.display="block";  
+		    						$(x).css("display","block");  
 		    						setTimeout(carousel, 9000);    
 								}
 			    				var myselec = 0;
@@ -595,7 +595,7 @@
 		    						}
 		    						myselec++;
 		    						if (myselec > x.length) {myselec = 1}    
-		    						//x[myselec-1].style.display="block";  
+		    						$(x).css("display","block"); 
 		    						setTimeout(varios, 9000);    
 								}
 							</script>
