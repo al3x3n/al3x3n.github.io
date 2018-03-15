@@ -44,6 +44,8 @@
 		  	<!-- Main Stylesheet File -->
 		  		<link href="css/style.css" rel="stylesheet">
 		  		<link href="css/estilos.css" rel="stylesheet">
+		  	<!-- Fonts -->
+		  		<link rel="stylesheet" href="css/font-awesome.min.css" rel="stylesheet">
 	  	<!-- Css -->
 	  	<!-- Js -->
 		  	<!-- Required JavaScript Libraries -->
@@ -60,8 +62,6 @@
 			  	<script src="lib/stickyjs/sticky.js"></script>
 			  	<script src="lib/parallax/parallax.js"></script>
 				<script src="lib/easing/easing.min.js"></script>
-			<!--portafolio-->
-	  	        <script src="js/main.js"></script>
 			<!-- mensajes emergentes -->
 			  	<script src="js/toastr/toastr.js"></script>
 			  	<link href="js/toastr/build/toastr.css" rel="stylesheet"/>
@@ -75,28 +75,123 @@
 			<!-- Includes JS-->
 		 		<!-- Chat -->
 					<script type="text/javascript">
-					window.$zopim || (function(d, s) {
-					    var z = $zopim = function(c) {
-					            z._.push(c)
-					            $zopim.livechat.setLanguage('es');
-					        },
-					        $ = z.s =
-					        d.createElement(s),
-					        e = d.getElementsByTagName(s)[0];
-					    z.set = function(o) {
-					        z.set.
-					        _.push(o)
-					    };
-					    z._ = [];
-					    z.set._ = [];
-					    $.async = !0;
-					    $.setAttribute("charset", "utf-8");
-					    $.src = "https://v2.zopim.com/?5Ig7F8Pgo7T9G4FcLR9XZxy8Jb0wSA0D";
-					    z.t = +new Date;
-					    $.
-					    type = "text/javascript";
-					    e.parentNode.insertBefore($, e)
-					})(document, "script");
+						window.$zopim || (function(d, s) {
+						    var z = $zopim = function(c) {
+						            z._.push(c)
+						            $zopim.livechat.setLanguage('es');
+						        },
+						        $ = z.s =
+						        d.createElement(s),
+						        e = d.getElementsByTagName(s)[0];
+						    z.set = function(o) {
+						        z.set.
+						        _.push(o)
+						    };
+						    z._ = [];
+						    z.set._ = [];
+						    $.async = !0;
+						    $.setAttribute("charset", "utf-8");
+						    $.src = "https://v2.zopim.com/?5Ig7F8Pgo7T9G4FcLR9XZxy8Jb0wSA0D";
+						    z.t = +new Date;
+						    $.
+						    type = "text/javascript";
+						    e.parentNode.insertBefore($, e)
+						})(document, "script");
+						/*NEW MENU*/
+							$(document).ready(function(e) {
+								$(function() {
+									var pause = 10;
+									$(document).scroll(function(e) {
+										var tops = [];
+											
+											$('.story').each(function(index, element) {
+												tops.push( $(element).offset().top - 200 );
+											});
+								
+											var scroll_top = $(this).scrollTop();
+											
+											var lis = $('.nav > li');
+											for ( var i=tops.length-1; i>=0; i-- ) {
+												if ( scroll_top >= tops[i] ) {
+													menu_focus( lis[i], i+1 );
+													break;
+												}
+											}
+									});
+									$(document).scroll();
+								});
+							});
+							/***************
+							* = Menu hover *
+							***************/
+								jQuery(document).ready(function ($) {
+									//Cache some variables
+									var menu_item = $('.nav').find('li');
+									
+									menu_item.hover(
+										function(e) {
+											var icon = $(this).find('.icon');
+											var left_pos = icon.offset().left - $('.nav').offset().left;
+											var el_width = icon.width() + $(this).find('.text').width() + 10;
+											var hover_bar = $('<div class="active-menu special-active-menu"></div>')
+												.css('left', left_pos)
+												.css('width', el_width)
+												.attr('id', 'special-active-menu-' + $(this).data('slide') );
+											$('.active-menu').after( hover_bar );
+										},
+										function(e) {
+											$('.special-active-menu').remove();
+										}
+									);
+								});
+							function menu_focus( element, i ) {
+								if ( $(element).hasClass('active') ) {
+									if ( i == 6 ) {
+										if ( $('.navbar').hasClass('inv') == false )
+											return;
+									} else {
+										return;
+									}
+								}
+								
+								enable_arrows( i );
+									
+								if ( i == 1 || i == 6 )
+									$('.navbar').removeClass('inv');
+								else
+									$('.navbar').addClass('inv');
+								
+								$('.nav > li').removeClass('active');
+								$(element).addClass('active');
+								
+								var icon = $(element).find('.icon');
+								
+								var left_pos = icon.offset().left - $('.nav').offset().left;
+								var el_width = icon.width() + $(element).find('.text').width() + 10;
+								
+								$('.active-menu').stop(false, false).animate(
+									{
+										left: left_pos,
+										width: el_width
+									},
+									1500,
+									'easeInOutQuart'
+								);
+							}
+							function enable_arrows( dataslide ) {
+								$('#arrows div').addClass('disabled');
+								if ( dataslide != 1 ) {
+									$('#arrow-up').removeClass('disabled');
+								}
+								if ( dataslide != 6 ) {
+									$('#arrow-down').removeClass('disabled');
+								}
+								if ( dataslide == 3 ) {
+									$('#arrow-left').removeClass('disabled');
+									$('#arrow-right').removeClass('disabled');
+								}
+							}
+						/*NEW MENU*/
 					</script>
 				<!-- Chat -->
 				<!-- analytics -->
@@ -114,15 +209,43 @@
 		<!-- Js -->
 	</head>
 	<body>
+		<!-- NEW MENU -->
+			<div class="navbar navbar-fixed-top" data-activeslide="1">
+				<div class="container">
+				
+					<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					
+					
+					<div class="nav-collapse collapse navbar-responsive-collapse">
+						<ul class="nav row">
+							<li data-slide="1" class="col-12 col-sm-2"><a id="menu-link-1" href="#slide-1" title="Next Section"><span class="icon icon-home"></span> <span class="text">HOME</span></a></li>
+							<li data-slide="2" class="col-12 col-sm-2"><a id="menu-link-2" href="#slide-2" title="Next Section"><span class="icon icon-user"></span> <span class="text">ABOUT US</span></a></li>
+							<li data-slide="3" class="col-12 col-sm-2"><a id="menu-link-3" href="#slide-3" title="Next Section"><span class="icon icon-briefcase"></span> <span class="text">PORTFOLIO</span></a></li>
+							<li data-slide="4" class="col-12 col-sm-2"><a id="menu-link-4" href="#slide-4" title="Next Section"><span class="icon icon-gears"></span> <span class="text">PROCESS</span></a></li>
+							<li data-slide="5" class="col-12 col-sm-2"><a id="menu-link-5" href="#slide-5" title="Next Section"><span class="icon icon-heart"></span> <span class="text">CLIENTS</span></a></li>
+							<li data-slide="6" class="col-12 col-sm-2"><a id="menu-link-6" href="#slide-6" title="Next Section"><span class="icon icon-envelope"></span> <span class="text">CONTACT</span></a></li>
+						</ul>
+						<div class="row">
+							<div class="col-sm-2 active-menu"></div>
+						</div>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</div><!-- /.navbar -->
+		<!-- NEW MENU -->
 		<!-- Hero -->
-			<section class="hero" id="hero">
+			<section class="hero slide story" id="hero" data-slide="1">
 				<div class="container text-center">
 					<div class="row">
 					    <div class="col-md-12" inner>
 					      <img class="hero-brand" alt="Redes Gesa" src="images/redes_gesa_2.png">
 					    </div>
 					</div>
-	  	<div class="col-md-12 animatedParent">
+	  				<div class="col-md-12 animatedParent">
 				    	<h1 class="animated fadeInDown go">
 					        Una empresa con personalidad
 				      	</h1>
@@ -130,7 +253,6 @@
 					      	Soluciones para tu instalación.
 					    </p>
 					    <script type="text/javascript">
-            
            					$(function(){
   								$('.hero').mouseenter(function(){
     							var $p = $("h1.animated");
@@ -140,7 +262,6 @@
      							});
      							});
  							});
-
  							$(function(){
      							$('.hero').mouseenter(function(){
      							var $b = $("p.animated"); 
@@ -191,57 +312,54 @@
 		  	</header>
 		<!-- Header -->
 		<!-- About -->
-		  	<section class="about" id="about">
+		  	<section class="about slide story" id="about" data-slide="2">
 			    <div class="container text-center">
-			      <h2>
-			          Acerca de nosotros
+			      	<h2>
+			          	Acerca de nosotros
 			        </h2>
-			      <p align="justify" class="fade-scroll">
-			      	Somos una empresa 100% mexicana que inició operaciones en 1989 en el estado de Aguascalientes, Ags. Con un contrato por parte de CONSTRUCCIONES TELEFÓNICAS MEXICANA, S.A. DE C.V. para hacernos cargo de una parte del programa de Redes de TEL-MEX. En ese tiempo se realizaron obras de redes principalmente en los estados de Aguascalientes y Zacatecas. Nos especializamos en los servicios de Cableado Estructurado Voz-Datos, Redes de Fibra Óptica, Telefonía Convencional, Soporte Técnico en Redes LAN, Servicio Preventivo, Instalaciones Eléctricas de Energía Regulada, Sistemas de Seguridad. Ademas de que somos <span>PARNER DE CISCO.</span>
-			      </p>
-			      <script type="text/javascript">
-            
-            $(function() {
-                
-                var documentEl = $(document),
-                    fadeElem = $('.fade-scroll');
-                
-                documentEl.on('scroll', function() { 
-                    var currScrollPos = documentEl.scrollTop();
-                    
-                    fadeElem.each(function() {
+			      	<p align="justify" class="fade-scroll">
+			      		Somos una empresa 100% mexicana que inició operaciones en 1989 en el estado de Aguascalientes, Ags. Con un contrato por parte de CONSTRUCCIONES TELEFÓNICAS MEXICANA, S.A. DE C.V. para hacernos cargo de una parte del programa de Redes de TEL-MEX. En ese tiempo se realizaron obras de redes principalmente en los estados de Aguascalientes y Zacatecas. Nos especializamos en los servicios de Cableado Estructurado Voz-Datos, Redes de Fibra Óptica, Telefonía Convencional, Soporte Técnico en Redes LAN, Servicio Preventivo, Instalaciones Eléctricas de Energía Regulada, Sistemas de Seguridad. Ademas de que somos <span>PARNER DE CISCO.</span>
+			      	</p>
+			      	<script type="text/javascript">            
+		            	$(function() {
+		                
+		                	var documentEl = $(document),
+		                    fadeElem = $('.fade-scroll');
+		                
+		                	documentEl.on('scroll', function() { 
+			                    var currScrollPos = documentEl.scrollTop();
+			                    
+			                    fadeElem.each(function() {
 
-                        var $this = $(this),                       
-                            elemOffsetTop = $this.offset().top;                           
-                        if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/400);
-                    }); 
-                });
-                
-            });
-        
-        </script>
-			      <div class="row stats-row">
-			        <div class="stats-col text-center col-md-3 col-sm-6">
-			        	<div class="circle">
-			            	<span class="stats-no" data-toggle="counter-up">232</span> Clientes Satisfechos
-			          	</div>
-			        </div>
-			        <div class="stats-col text-center col-md-3 col-sm-6">
-			          	<div class="circle">
-			            	<span class="stats-no" data-toggle="counter-up">79</span> Proyectos Realizados
-			          	</div>
-			        </div>
-			        <div class="stats-col text-center col-md-3 col-sm-6">
-			          	<div class="circle">
-			            	<span class="stats-no" data-toggle="counter-up">1,463</span> Horas de Soporte
-			          	</div>
-			        </div>
-			        <div class="stats-col text-center col-md-3 col-sm-6">
-			          	<div class="circle">
-			            	<span class="stats-no" data-toggle="counter-up">15</span> Personal
-			          	</div>
-			        </div>
-			      </div>
+			                        var $this = $(this),                       
+			                            elemOffsetTop = $this.offset().top;                           
+			                        if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/400);
+			                    }); 
+			                });
+			            });  
+        			</script>
+			      	<div class="row stats-row">
+			        	<div class="stats-col text-center col-md-3 col-sm-6">
+			        		<div class="circle">
+			            		<span class="stats-no" data-toggle="counter-up">232</span> Clientes Satisfechos
+			          		</div>
+			        	</div>
+			        	<div class="stats-col text-center col-md-3 col-sm-6">
+			          		<div class="circle">
+			            		<span class="stats-no" data-toggle="counter-up">79</span> Proyectos Realizados
+			          		</div>
+			        	</div>
+			        	<div class="stats-col text-center col-md-3 col-sm-6">
+			          		<div class="circle">
+			            		<span class="stats-no" data-toggle="counter-up">1,463</span> Horas de Soporte
+			          		</div>
+			        	</div>
+			        	<div class="stats-col text-center col-md-3 col-sm-6">
+			          		<div class="circle">
+			            		<span class="stats-no" data-toggle="counter-up">15</span> Personal
+			          		</div>
+			        	</div>
+			      	</div>
 			    </div>
 		  	</section>			
 		    <section id="about1">
@@ -286,7 +404,7 @@
 		    </section>
 	  	<!-- /About -->
 	  	<!-- Parallax -->
-			<div class="block bg-primary block-pd-lg block-bg-overlay text-center" data-bg-img="images/parallax-bg.jpg" data-settings='{"stellar-background-ratio": 0.6}' data-toggle="parallax-bg">
+			<div class="block bg-primary block-pd-lg block-bg-overlay text-center slide story" data-bg-img="images/parallax-bg.jpg" data-settings='{"stellar-background-ratio": 0.6}' data-toggle="parallax-bg" data-slide="3">
 			    <h2>
 			        Bienvenido a Redes Gesa
 			    </h2>
@@ -440,121 +558,20 @@
 				          		Descripción del Portafolio
 				        	</p>
 				      	</div>
-				      	<!--<div class="portfolio-grid">
-				        	<div class="row">
-				          		<div class="col-lg-3 col-sm-6 col-xs-12">
-				            		<div class="card card-block">
-					              		<a href="#">
-					              			<img alt="" src="images/porta/porta_1.jpg">
-					                		<div class="portfolio-over">
-					                  			<div>
-					                    			<h3 class="card-title">Cámaras</h3>
-					                    			<p class="card-text">Cámaras de calidad, asegurando un gran rendimiento y capacidad.</p>
-					                  			</div>
-					                		</div>
-					                	</a>
-				            		</div>
-				          		</div>
-					          	<div class="col-lg-3 col-sm-6 col-xs-12">
-					           		<div class="card card-block">
-					              		<a href="#"><img alt="" src="images/porta/porta_2.jpg">
-						                	<div class="portfolio-over">
-						                  		<div>
-							                    	<h3 class="card-title">Cableado</h3>
-							                    	<p class="card-text">Cableado en base a la nececidad del cliente, Cat6, Cat5, etc...</p>
-						                  		</div>
-											</div>
-										</a>
-					            	</div>
-					          	</div>
-					          	<div class="col-lg-3 col-sm-6 col-xs-12">
-					            	<div class="card card-block">
-						              	<a href="#"><img alt="" src="images/porta/porta_3.jpg">
-						                	<div class="portfolio-over">
-						                  		<div>
-						                    		<h3 class="card-title">Rj45</h3>
-						                    		<p class="card-text">Rj45 con gran calidad y duración para evitar que se rompan facilmente</p>
-						                  		</div>
-						                	</div>
-						            	</a>
-					            	</div>
-					          	</div>
-					          	<div class="col-lg-3 col-sm-6 col-xs-12">
-					            	<div class="card card-block">
-					              		<a href="#"><img alt="" src="images/porta/porta_4.jpg">
-							                <div class="portfolio-over">
-							                  	<div>
-								                    <h3 class="card-title">The Dude Rockin</h3>
-								                    <p class="card-text">Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.</p>
-							                  	</div>
-							                </div>
-					            		</a>
-					            	</div>
-					          	</div>
-					        </div>
-				        	<div class="row">
-					          	<div class="col-lg-3 col-sm-6 col-xs-12">
-						            <div class="card card-block">
-						              	<a href="#"><img alt="" src="images/porta/porta_5.png">
-						                	<div class="portfolio-over">
-						                  		<div>
-								                    <h3 class="card-title">Cámaras</h3>
-								                    <p class="card-text">Cámaras de calidad, asegurando un gran rendimiento y capacidad.</p>
-						                  		</div>
-						                	</div>
-						                </a>
-						            </div>
-					          	</div>
-					          	<div class="col-lg-3 col-sm-6 col-xs-12">
-						            <div class="card card-block">
-						              	<a href="#"><img alt="" src="images/porta/porta_6.png">
-							                <div class="portfolio-over">
-							                  	<div>
-							                    	<h3 class="card-title">Cableado</h3>
-							                    	<p class="card-text">Cableado en base a la nececidad del cliente, Cat6, Cat5, ect...</p>
-							                  	</div>
-						                	</div>
-						            	</a>
-						            </div>
-					          	</div>
-				          		<div class="col-lg-3 col-sm-6 col-xs-12">
-						            <div class="card card-block">
-						              	<a href="#"><img alt="" src="images/porta/porta_7.png">
-						                	<div class="portfolio-over">
-						                  		<div>
-						                  			<h3 class="card-title">Rj45</h3>
-						                    		<p class="card-text">Rj45 con gran calidad y duración para evitar que se rompan facilmente.</p>
-						                  		</div>
-						                	</div>
-						            	</a>
-						            </div>
-				          		</div>
-				          		<div class="col-lg-3 col-sm-6 col-xs-12">
-					            	<div class="card card-block">
-						              	<a href="#">
-						              		<img alt="" src="images/porta/porta_8.png">
-							                <div class="portfolio-over">
-							                  	<div>
-							                    	<h3 class="card-title">The Dude Rockin</h3>
-							                    	<p class="card-text">Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.</p>
-							                  	</div>
-							                </div>
-						            	</a>
-					            	</div>
-				          		</div>
-				        	</div>
-				      	</div> -->
-				      	<!--<div class="w3-content w3-section" style="max-width:500px;">  					
-					        <img class="mySlides w3-animate-fading" src="images/porta/porta_1.jpg" style="width:100%">
-		  					<img class="mySlides w3-animate-fading" src="images/porta/porta_2.jpg" style="width:100%">
-		  					<img class="mySlides w3-animate-fading" src="images/porta/porta_3.jpg" style="width:100%">
-		  					<img class="mySlides w3-animate-fading" src="images/porta/porta_4.jpg" style="width:100%">
-		  					<img class="mySlides w3-animate-fading" src="images/porta/porta_5.png" style="width:100%">
-		  					<img class="mySlides w3-animate-fading" src="images/porta/porta_6.png" style="width:100%">
-		  					<img class="mySlides w3-animate-fading" src="images/porta/porta_7.png" style="width:100%">
-		  					<img class="mySlides w3-animate-fading" src="images/porta/porta_8.png" style="width:100%">
-						</div>
-			            <script type="text/javascript">           	
+						<div class="row">
+
+				          	<div class="col-lg-12">
+				            	<ul id="portfolio-flters">
+				              		<li data-filter=".filter-app, .filter-card, .filter-logo, .filter-web" class="filter-active">All</li>
+				              		<li data-filter=".filter-app">Cableado</li>
+				              		<li data-filter=".filter-card">Camaras</li>
+				              		<li data-filter=".filter-logo">RJ45</li>
+				              		<li data-filter=".filter-web">Instalaciones</li>
+				            	</ul>
+				          	</div>
+				        </div>
+        				<div class="row" id="portfolio-wrapper">
+        					<script type="text/javascript">           	
 							    var myIndex = 0;
 								carousel();
 								function carousel() {
@@ -565,205 +582,86 @@
 		    						}
 		    						myIndex++;
 		    						if (myIndex > x.length) {myIndex = 1}    
-		    						x[myIndex-1].style.display="block";  
+		    						//x[myIndex-1].style.display="block";  
 		    						setTimeout(carousel, 9000);    
 								}
-						</script>
-						<div class="w3-content w3-section" style="max-width:500px;">  					
-					        <p class="des_sly w3-animate-fading" style="width:100%">camaras de alta calidad1</p>
-		  					<p class="des_sly w3-animate-fading" style="width:100%">camaras de alta calidad2</p>
-		  					<p class="des_sly w3-animate-fading" style="width:100%">camaras de alta calidad3</p>
-		  					<p class="des_sly w3-animate-fading" style="width:100%">camaras de alta calidad4</p>
-		  					<p class="des_sly w3-animate-fading" style="width:100%">camaras de alta calidad5</p>
-		  					<p class="des_sly w3-animate-fading" style="width:100%">camaras de alta calidad6</p>
-		  					<p class="des_sly w3-animate-fading" style="width:100%">camaras de alta calidad7</p>
-		  					<p class="des_sly w3-animate-fading" style="width:100%">camaras de alta calidad8</p>
-						</div>
-			            <script type="text/javascript">
-			    			var myselec = 0;
-							varios();       
-							function varios() {
-	    						var i;
-	    						var x = document.getElementsByClassName("des_sly");
-	    						for (i = 0; i < x.length; i++) {
-	       						x[i].style.display = "none";  
-	    						}
-	    						myselec++;
-	    						if (myselec > x.length) {myselec = 1}    
-	    						x[myselec-1].style.display="block";  
-	    						setTimeout(varios, 9000);    
-							}
-						</script>-->
-						 <div class="row">
-
-          <div class="col-lg-12">
-            <ul id="portfolio-flters">
-              <li data-filter=".filter-app, .filter-card, .filter-logo, .filter-web" class="filter-active">All</li>
-              <li data-filter=".filter-app">Cableado</li>
-              <li data-filter=".filter-card">Camaras</li>
-              <li data-filter=".filter-logo">RJ45</li>
-              <li data-filter=".filter-web">Instalaciones</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row" id="portfolio-wrapper">
-        	<script type="text/javascript">           	
-							    var myIndex = 0;
-								carousel();
-								function carousel() {
+			    				var myselec = 0;
+								varios();       
+								function varios() {
 		    						var i;
-		    						var x = document.getElementsByClassName("mySlides");
+		    						var x = document.getElementsByClassName("des_sly");
 		    						for (i = 0; i < x.length; i++) {
 		       						x[i].style.display = "none";  
 		    						}
-		    						myIndex++;
-		    						if (myIndex > x.length) {myIndex = 1}    
-		    						x[myIndex-1].style.display="block";  
-		    						setTimeout(carousel, 9000);    
+		    						myselec++;
+		    						if (myselec > x.length) {myselec = 1}    
+		    						//x[myselec-1].style.display="block";  
+		    						setTimeout(varios, 9000);    
 								}
-						</script>
-						  <script type="text/javascript">
-			    			var myselec = 0;
-							varios();       
-							function varios() {
-	    						var i;
-	    						var x = document.getElementsByClassName("des_sly");
-	    						for (i = 0; i < x.length; i++) {
-	       						x[i].style.display = "none";  
-	    						}
-	    						myselec++;
-	    						if (myselec > x.length) {myselec = 1}    
-	    						x[myselec-1].style.display="block";  
-	    						setTimeout(varios, 9000);    
-							}
-						</script>
-          <div class="col-lg-3 col-md-6 portfolio-item filter-app w3-content w3-section" style="max-width:500px;">
-            
-              <img class="mySlides  w3-animate-fading" src="images/porta/porta_2.jpg" alt="" style="width:100%">
-              <div class="details des_sly w3-animate-fading" style="width:100%">
-                <h4>Cableado</h4>
-                <span>Cableado en base a la nececidad del cliente.</span>
-              </div>
-            
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-web w3-content w3-section" style="max-width:500px;">
-            
-              <img class="mySlides  w3-animate-fading" src="images/porta/porta_1.jpg" alt="" style="width:100%">
-              <div class="details des_sly w3-animate-fading" style="width:100%">
-                <h4>Instalaciones</h4>
-                <span>Alored dono par</span>
-              </div>
-            
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-app w3-content w3-section" style="max-width:500px;">
-            
-              <img  class="mySlides  w3-animate-fading" src="images/porta/porta_6.png" alt="" style="width:100%">
-              <div class="details des_sly w3-animate-fading" style="width:100%">
-                <h4>cableado</h4>
-                <span>Cableado en base a la nececidad del cliente.</span>
-              </div>
-            
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-card w3-content w3-section" style="max-width:500px;">
-            
-              <img class="mySlides  w3-animate-fading" src="images/porta/porta_4.jpg" alt="" style="width:100%">
-              <div class="details des_sly w3-animate-fading" style="width:100%">
-                <h4>Camaras</h4>
-                <span>Cámaras de calidad, rendimiento y capacidad.</span>
-              </div>
-            
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-card w3-content w3-section" style="max-width:500px;">
-            
-              <img class="mySlides  w3-animate-fading" src="images/porta/porta_5.png" alt="" style="width:100%">
-              <div class="details des_sly w3-animate-fading" style="width:100%">
-                <h4>Camaras</h4>
-                <span>Cámaras de calidad, rendimiento y capacidad.</span>
-              </div>
-            
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-web w3-content w3-section" style="max-width:500px;">
-           
-              <img class="mySlides  w3-animate-fading" src="images/porta/porta_3.jpg" alt="" style="width:100%">
-              <div class="details des_sly w3-animate-fading" style="width:100%">
-                <h4>Instalaciones</h4>
-                <span>Alored dono par</span>
-              </div>
-            
-          </div>
-
-          <!--<div class="col-lg-3 col-md-6 portfolio-item filter-card">
-            <a href="">
-              <img src="images/porta/porta_7.png" alt="">
-              <div class="details">
-                <h4>Card 3</h4>
-                <span>Alored dono par</span>
-              </div>
-            </a>
-          </div>-->
-
-          <!--<div class="col-lg-3 col-md-6 portfolio-item filter-app">
-            <a href="">
-              <img src="images/porta/porta_8.png" alt="">
-              <div class="details">
-                <h4>App 2</h4> 
-                <span>Alored dono par</span>
-              </div>
-            </a>
-          </div>-->
-
-         <div class="col-lg-3 col-md-6 portfolio-item filter-logo w3-content w3-section" style="max-width:500px;">
-            
-              <img class="mySlides  w3-animate-fading" src="images/porta/porta_7.png" alt="" style="width:100%">
-              <div class="details des_sly w3-animate-fading" style="width:100%">
-                <h4>Rj45</h4>
-                <span>Con gran calidad y duración.</span>
-              </div>
-            
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-logo w3-content w3-section" style="max-width:500px;">
-            
-              <img class="mySlides  w3-animate-fading" src="images/porta/porta_8.png" alt="" style="width:100%">
-              <div class="details des_sly w3-animate-fading" style="width:100%">
-                <h4>Rj45</h4>
-                <span>Con gran calidad y duración.</span>
-              </div>
-           
-          </div>
-
-          <!--<div class="col-lg-3 col-md-6 portfolio-item filter-web">
-            <a href="">
-              <img src="images/porta/porta_8.png" alt="">
-              <div class="details">
-                <h4>Web 1</h4>
-                <span>Alored dono par</span>
-              </div>
-            </a>
-          </div>-->
-
-          <!--<div class="col-lg-3 col-md-6 portfolio-item filter-logo">
-            <a href="">
-              <img src="images/porta/porta_8.png" alt="">
-              <div class="details">
-                <h4>Logo 2</h4>
-                <span>Alored dono par</span>
-              </div>
-            </a>
-          </div>-->
-        </div>
+							</script>
+				          	<div class="col-lg-3 col-md-6 portfolio-item filter-app w3-content w3-section" style="max-width:500px;">
+				              	<img class="mySlides  w3-animate-fading" src="images/porta/porta_2.jpg" alt="" style="width:100%">
+				              	<div class="details des_sly w3-animate-fading" style="width:100%">
+				                	<h4>Cableado</h4>
+				                	<span>Cableado en base a la nececidad del cliente.</span>
+				              	</div>
+				          	</div>
+				          	<div class="col-lg-3 col-md-6 portfolio-item filter-web w3-content w3-section" style="max-width:500px;">
+				              	<img class="mySlides  w3-animate-fading" src="images/porta/porta_1.jpg" alt="" style="width:100%">
+				              	<div class="details des_sly w3-animate-fading" style="width:100%">
+				                	<h4>Instalaciones</h4>
+				                	<span>Alored dono par</span>
+				              	</div>
+				          	</div>
+						  	<div class="col-lg-3 col-md-6 portfolio-item filter-app w3-content w3-section" style="max-width:500px;">
+						      	<img  class="mySlides  w3-animate-fading" src="images/porta/porta_6.png" alt="" style="width:100%">
+						      	<div class="details des_sly w3-animate-fading" style="width:100%">
+						        	<h4>cableado</h4>
+						        	<span>Cableado en base a la nececidad del cliente.</span>
+						      	</div>
+						  	</div>
+				          	<div class="col-lg-3 col-md-6 portfolio-item filter-card w3-content w3-section" style="max-width:500px;">
+				              	<img class="mySlides  w3-animate-fading" src="images/porta/porta_4.jpg" alt="" style="width:100%">
+				              	<div class="details des_sly w3-animate-fading" style="width:100%">
+				                	<h4>Camaras</h4>
+				                	<span>Cámaras de calidad, rendimiento y capacidad.</span>
+				              	</div>
+				          	</div>
+				          	<div class="col-lg-3 col-md-6 portfolio-item filter-card w3-content w3-section" style="max-width:500px;">
+				              	<img class="mySlides  w3-animate-fading" src="images/porta/porta_5.png" alt="" style="width:100%">
+				              	<div class="details des_sly w3-animate-fading" style="width:100%">
+				                	<h4>Camaras</h4>
+				                	<span>Cámaras de calidad, rendimiento y capacidad.</span>
+				              	</div>
+				          	</div>
+				          	<div class="col-lg-3 col-md-6 portfolio-item filter-web w3-content w3-section" style="max-width:500px;">
+				              	<img class="mySlides  w3-animate-fading" src="images/porta/porta_3.jpg" alt="" style="width:100%">
+				              	<div class="details des_sly w3-animate-fading" style="width:100%">
+				                	<h4>Instalaciones</h4>
+				                	<span>Alored dono par</span>
+				              	</div>
+				          	</div>
+				         	<div class="col-lg-3 col-md-6 portfolio-item filter-logo w3-content w3-section" style="max-width:500px;">
+				              	<img class="mySlides  w3-animate-fading" src="images/porta/porta_7.png" alt="" style="width:100%">
+				              	<div class="details des_sly w3-animate-fading" style="width:100%">
+				                	<h4>Rj45</h4>
+				                	<span>Con gran calidad y duración.</span>
+				              	</div>
+				          	</div>
+				          	<div class="col-lg-3 col-md-6 portfolio-item filter-logo w3-content w3-section" style="max-width:500px;">
+				              	<img class="mySlides  w3-animate-fading" src="images/porta/porta_8.png" alt="" style="width:100%">
+				              	<div class="details des_sly w3-animate-fading" style="width:100%">
+				                	<h4>Rj45</h4>
+				                	<span>Con gran calidad y duración.</span>
+				              	</div>
+				          	</div>
+        				</div>
 					</section>
 				<!-- Portfolio -->
 			</div>
 		<!-- Parallax -->
 		<!-- Clientes  -->
-			<section id="clients" class="clientes">
+			<section id="clients" class="clientes slide story" data-slide="4">
 				<div class="container text-center">
 					<h2>Estamos dados de alta como Integradores con:</h2>
 					<div class="container">
@@ -794,7 +692,7 @@
 			</section>
 		<!-- Clientes  -->
 	  	<!-- Contact  -->
-	  		<section id="contact">
+	  		<section id="contact" class="slide story" data-slide="5">
 		      	<div class="container">
 			        <div class="row">
 			          	<div class="col-md-12 text-center">
