@@ -223,12 +223,12 @@
 					
 					<div class="nav-collapse collapse navbar-responsive-collapse">
 						<ul class="nav row">
-							<li data-slide="1" class="col-12 col-sm-2"><a id="menu-link-1" href="#slide-1" title="Next Section"><span class="icon icon-home"></span> <span class="text">HOME</span></a></li>
-							<li data-slide="2" class="col-12 col-sm-2"><a id="menu-link-2" href="#slide-2" title="Next Section"><span class="icon icon-user"></span> <span class="text">ABOUT US</span></a></li>
-							<li data-slide="3" class="col-12 col-sm-2"><a id="menu-link-3" href="#slide-3" title="Next Section"><span class="icon icon-briefcase"></span> <span class="text">PORTFOLIO</span></a></li>
-							<li data-slide="4" class="col-12 col-sm-2"><a id="menu-link-4" href="#slide-4" title="Next Section"><span class="icon icon-gears"></span> <span class="text">PROCESS</span></a></li>
-							<li data-slide="5" class="col-12 col-sm-2"><a id="menu-link-5" href="#slide-5" title="Next Section"><span class="icon icon-heart"></span> <span class="text">CLIENTS</span></a></li>
-							<li data-slide="6" class="col-12 col-sm-2"><a id="menu-link-6" href="#slide-6" title="Next Section"><span class="icon icon-envelope"></span> <span class="text">CONTACT</span></a></li>
+							<li data-slide="1" class="col-12 col-sm-2"><a id="menu-link-1" href="#hero" title="Next Section"><span class="icon icon-home"></span> <span class="text">HOME</span></a></li>
+							<li data-slide="2" class="col-12 col-sm-2"><a id="menu-link-2" href="#about" title="Next Section"><span class="icon icon-user"></span> <span class="text">NOSOTROS</span></a></li>
+							<li data-slide="3" class="col-12 col-sm-2"><a id="menu-link-3" href="#features" title="Next Section"><span class="icon icon-briefcase"></span> <span class="text">SERVICIOS</span></a></li>
+							<li data-slide="4" class="col-12 col-sm-2"><a id="menu-link-4" href="#portfolio" title="Next Section"><span class="icon icon-gears"></span> <span class="text">PORTAFOLIO</span></a></li>
+							<li data-slide="5" class="col-12 col-sm-2"><a id="menu-link-5" href="#contact" title="Next Section"><span class="icon icon-heart"></span> <span class="text">CONTACTO</span></a></li>
+							<!-- <li data-slide="6" class="col-12 col-sm-2"><a id="menu-link-6" href="#slide-6" title="Next Section"><span class="icon icon-envelope"></span> <span class="text">CONTACT</span></a></li> -->
 						</ul>
 						<div class="row">
 							<div class="col-sm-2 active-menu"></div>
@@ -280,7 +280,7 @@
 			</section>
 		<!-- /Hero -->
 		<!-- Header -->
-		  	<header id="header">
+		  	<!-- <header id="header">
 			    <div class="container">
 			      	<div id="logo" class="pull-left">
 			        	<a href="index.html">
@@ -309,7 +309,7 @@
 			        	<a href="#"><i class="fa fa-envelope"></i></a>
 			      	</nav>
 			    </div>
-		  	</header>
+		  	</header> -->
 		<!-- Header -->
 		<!-- About -->
 		  	<section class="about slide story" id="about" data-slide="2">
@@ -317,27 +317,9 @@
 			      	<h2>
 			          	Acerca de nosotros
 			        </h2>
-			      	<p align="justify" class="fade-scroll">
+			      	<p align="justify">
 			      		Somos una empresa 100% mexicana que inició operaciones en 1989 en el estado de Aguascalientes, Ags. Con un contrato por parte de CONSTRUCCIONES TELEFÓNICAS MEXICANA, S.A. DE C.V. para hacernos cargo de una parte del programa de Redes de TEL-MEX. En ese tiempo se realizaron obras de redes principalmente en los estados de Aguascalientes y Zacatecas. Nos especializamos en los servicios de Cableado Estructurado Voz-Datos, Redes de Fibra Óptica, Telefonía Convencional, Soporte Técnico en Redes LAN, Servicio Preventivo, Instalaciones Eléctricas de Energía Regulada, Sistemas de Seguridad. Ademas de que somos <span>PARNER DE CISCO.</span>
 			      	</p>
-			      	<script type="text/javascript">            
-		            	$(function() {
-		                
-		                	var documentEl = $(document),
-		                    fadeElem = $('.fade-scroll');
-		                
-		                	documentEl.on('scroll', function() { 
-			                    var currScrollPos = documentEl.scrollTop();
-			                    
-			                    fadeElem.each(function() {
-
-			                        var $this = $(this),                       
-			                            elemOffsetTop = $this.offset().top;                           
-			                        if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/400);
-			                    }); 
-			                });
-			            });  
-        			</script>
 			      	<div class="row stats-row">
 			        	<div class="stats-col text-center col-md-3 col-sm-6">
 			        		<div class="circle">
@@ -403,8 +385,8 @@
 			    </div>
 		    </section>
 	  	<!-- /About -->
-	  	<!-- Parallax -->
-			<div class="block bg-primary block-pd-lg block-bg-overlay text-center slide story" data-bg-img="images/parallax-bg.jpg" data-settings='{"stellar-background-ratio": 0.6}' data-toggle="parallax-bg" data-slide="3">
+	  	<!-- Parallax --> 	
+			<div class="block bg-primary block-pd-lg block-bg-overlay text-center slide story" data-bg-img="images/parallax-bg.jpg" data-settings='{"stellar-background-ratio": 0.6}' data-toggle="parallax-bg">
 			    <h2>
 			        Bienvenido a Redes Gesa
 			    </h2>
@@ -412,7 +394,7 @@
 			      Haremos de tu lugar, un lugar más seguro.
 			    </p>
 		  		<!-- Features -->
-				    <section class="features" id="features">
+				    <section class="features" id="features" data-slide="3">
 				      	<div class="container">
 				        	<h2 class="text-center">
 				            	Servicios
@@ -438,8 +420,7 @@
 							            </div>
 						              	<div>
 						                	<h3>
-						                		Redes de Fibra Óptica
-						                			
+						                		Redes de Fibra Óptica						                			
 						                	</h3>
 						                	<p class="white_font">
 						                		Descripción personal de fibra óptica.
@@ -454,8 +435,7 @@
 						              	</div>
 						              	<div>
 						                	<h3>
-						                		Telefonía Convencional
-						                		
+						                		Telefonía Convencional						                		
 						                	</h3>
 						                	<p class="white_font">
 						                  		Contamos con la aprobación de Teléfonos de México para Instalación y Diseño.
@@ -513,10 +493,10 @@
 				    </section>
 				<!-- /Features -->
 				<!-- Call to Action -->
-				    <section class="cta">
-				      	<!--<div class="container">
-				        	<div class="row">-->
-					          	<!--<div class="col-lg-9 col-sm-12 text-lg-left text-center">-->
+				   <section class="cta" > 
+				      	<div class="container">
+				        	<!-- <div class="row">
+					          	<div class="col-lg-9 col-sm-12 text-lg-left text-center"> -->
 						            <div id="slider_empresas">
 										<ul>
 											<li>
@@ -545,13 +525,13 @@
 											</li>
 										</ul>
 									</div>
-					          	<!-- </div> -->
-				        	<!--</div>
-				      	</div-->
+					          	<!-- </div>
+				        	</div> -->
+				      	</div>
 				    </section>
 				<!-- /Call to Action -->
 				<!-- Portfolio -->
-				    <section class="features" id="portfolio">
+				    <section class="features story" id="portfolio" data-slide="4">
 				      	<div class="container text-center">
 				        	<h2>Portafolio</h2>
 				        	<p>
@@ -559,7 +539,6 @@
 				        	</p>
 				      	</div>
 						<div class="row">
-
 				          	<div class="col-lg-12">
 				            	<ul id="portfolio-flters">
 				              		<li data-filter=".filter-app, .filter-card, .filter-logo, .filter-web" class="filter-active">All</li>
@@ -571,35 +550,7 @@
 				          	</div>
 				        </div>
         				<div class="row" id="portfolio-wrapper">
-        					<script type="text/javascript">           	
-							    var myIndex = 0;
-								carousel();
-								function carousel() {
-		    						var i;
-		    						var x = document.getElementsByClassName("mySlides");
-		    						for (i = 0; i < x.length; i++) {
-		       						x[i].style.display = "none";  
-		    						}
-		    						myIndex++;
-		    						if (myIndex > x.length) {myIndex = 1}    
-		    						$(x).css("display","block");  
-		    						setTimeout(carousel, 9000);    
-								}
-			    				var myselec = 0;
-								varios();       
-								function varios() {
-		    						var i;
-		    						var x = document.getElementsByClassName("des_sly");
-		    						for (i = 0; i < x.length; i++) {
-		       						x[i].style.display = "none";  
-		    						}
-		    						myselec++;
-		    						if (myselec > x.length) {myselec = 1}    
-		    						$(x).css("display","block"); 
-		    						setTimeout(varios, 9000);    
-								}
-							</script>
-				          	<div class="col-lg-3 col-md-6 portfolio-item filter-app w3-content w3-section" style="max-width:500px;">
+        					<div class="col-lg-3 col-md-6 portfolio-item filter-app w3-content w3-section" style="max-width:500px;">
 				              	<img class="mySlides  w3-animate-fading" src="images/porta/porta_2.jpg" alt="" style="width:100%">
 				              	<div class="details des_sly w3-animate-fading" style="width:100%">
 				                	<h4>Cableado</h4>
@@ -657,11 +608,39 @@
 				          	</div>
         				</div>
 					</section>
+							<script type="text/javascript">           	
+							    var myIndex = 0;
+								carousel();
+								function carousel() {
+		    						var i;
+		    						var x = document.getElementsByClassName("mySlides");
+		    						for (i = 0; i < x.length; i++) {
+		       						x[i].style.display = "none";  
+		    						}
+		    						myIndex++;
+		    						if (myIndex > x.length) {myIndex = 1}    
+		    						$(x).css("display","block");  
+		    						setTimeout(carousel, 9000);    
+								}
+			    				var myselec = 0;
+								varios();       
+								function varios() {
+		    						var i;
+		    						var x = document.getElementsByClassName("des_sly");
+		    						for (i = 0; i < x.length; i++) {
+		       						x[i].style.display = "none";  
+		    						}
+		    						myselec++;
+		    						if (myselec > x.length) {myselec = 1}    
+		    						$(x).css("display","block"); 
+		    						setTimeout(varios, 9000);    
+								}
+							</script>
 				<!-- Portfolio -->
 			</div>
 		<!-- Parallax -->
 		<!-- Clientes  -->
-			<section id="clients" class="clientes slide story" data-slide="4">
+			<section id="clientes" class="clientes slide">
 				<div class="container text-center">
 					<h2>Estamos dados de alta como Integradores con:</h2>
 					<div class="container">

@@ -1782,7 +1782,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
   /*LINEAS MENU*/
     .active-menu {
-      background-color: #4e4e4e;
+      background-color: blue;
       content: '.';
       display: block;
       height: 5px;
@@ -1802,23 +1802,23 @@ body.mobile-nav-active #mobile-nav-toggle {
     }
     #special-active-menu-1,
     #special-active-menu-6 {
-      background-color: #4e4e4e !important;
+      background-color: black !important;
     }
 
     #special-active-menu-2 {
-      background-color: #1abc9c !important;
+      background-color: LIMEGREEN !important;
     }
 
     #special-active-menu-3 {
-      background-color: #e74c3c !important;
+      background-color: red !important;
     }
 
     #special-active-menu-4 {
-      background-color: #34495e !important;
+      background-color: yellow !important;
     }
 
     #special-active-menu-5 {
-      background-color: #e67e22 !important;
+      background-color: blue !important;
     }
   /*LINEAS MENU*/
 /*New Menu*/
