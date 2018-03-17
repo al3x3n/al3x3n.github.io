@@ -46,10 +46,12 @@
 		  		<link href="css/estilos.css" rel="stylesheet">
 		  	<!-- Fonts -->
 		  		<link rel="stylesheet" href="css/font-awesome.min.css" rel="stylesheet">
+		  		<link href="js/toastr/build/toastr.css" rel="stylesheet"/>
 	  	<!-- Css -->
 	  	<!-- Js -->
 		  	<!-- Required JavaScript Libraries -->
-				<script src="lib/jquery/jquery.min.js"></script>
+				<script src="js/jquery.min.js"></script>
+				<script src="js/jquery.appear.js"></script>
 			  	<script src="lib/jquery/jquery-migrate.min.js"></script>
 			  	<script src="lib/superfish/hoverIntent.js"></script>
 			  	<script src="lib/superfish/superfish.min.js"></script>
@@ -64,15 +66,12 @@
 				<script src="lib/easing/easing.min.js"></script>
 			<!-- mensajes emergentes -->
 			  	<script src="js/toastr/toastr.js"></script>
-			  	<link href="js/toastr/build/toastr.css" rel="stylesheet"/>
 			 <!--portafolio-->
 	  	        <script src="js/main.js"></script>
-	  	        <script src="lib/wow/wow.min.js"></script>
 				<!-- Template Specisifc Custom Javascript File -->
 			  	<script src="js/custom.js"></script>
 			  	<script src="js/contactform.js"></script>
 			  	<script src="js/system.js"></script>
-			  	<script src="js/jquery.appear.js"></script>
 			<!-- Includes JS-->
 		 		<!-- Chat -->
 					<script type="text/javascript">
@@ -247,117 +246,13 @@
 					    </div>
 					</div>
 	  				<div class="col-md-12 animatedParent">
-				    	<h1 class="animated Down go">
+				    	<h1 class="animated Down">
 					        Una empresa con personalidad
 				      	</h1>
-					    <p class="tagline animated Up go">
+					    <p class="tagline animated Up">
 					      	Soluciones para tu instalación.
 					    </p>
-					    <script type="text/javascript">
-           					/*$(function(){
-  								$('.hero').mouseenter(function(){
-    							var $p = $("h1.animated");
-    							$p.addClass("Down");
-    							$('.hero').mouseleave(function(){
-    							$p.removeClass("Down");
-     							});
-     							});
- 							});
- 							$(function(){
-     							$('.hero').mouseenter(function(){
-     							var $b = $("p.animated"); 
-    							$b.addClass("Up");
-    							$('.hero').mouseleave(function(){
-    							$b.removeClass("Up");
-     							});  
-  								});
-							});*/
-							//CSS3 Animate-it
-$('.animatedParent').appear();
-$('.animatedClick').click(function(){
-  var target = $(this).attr('data-target');
-
-  
-  if($(this).attr('data-sequence') != undefined){
-    var firstId = $("."+target+":first").attr('data-id');
-    var lastId = $("."+target+":last").attr('data-id');
-    var number = firstId;
-
-    //Add or remove the class
-    if($("."+target+"[data-id="+ number +"]").hasClass('go')){
-      //$("."+target+"[data-id="+ number +"]").addClass('goAway');
-      $("."+target+"[data-id="+ number +"]").removeClass('go');
-    }else{
-      $("."+target+"[data-id="+ number +"]").addClass('go');
-      //$("."+target+"[data-id="+ number +"]").removeClass('goAway');
-    }
-    number ++;
-    delay = Number($(this).attr('data-sequence'));
-    $.doTimeout(delay, function(){
-      console.log(lastId);
-      
-      //Add or remove the class
-      if($("."+target+"[data-id="+ number +"]").hasClass('go')){
-        //$("."+target+"[data-id="+ number +"]").addClass('goAway');
-        $("."+target+"[data-id="+ number +"]").removeClass('go');
-      }else{
-        $("."+target+"[data-id="+ number +"]").addClass('go');
-       // $("."+target+"[data-id="+ number +"]").removeClass('goAway');
-      }
-
-      //increment
-       ++number;
-
-      //continute looping till reached last ID
-      if(number <= lastId){return true;}
-    });
-  }else{
-    if($('.'+target).hasClass('go')){
-      //$('.'+target).addClass('goAway');
-      $('.'+target).removeClass('go');
-    }else{
-      $('.'+target).addClass('go');
-      //$('.'+target).removeClass('goAway');
-    }
-  } 
-});
-
-$(document.body).on('appear', '.animatedParent', function(e, $affected){
-  var ele = $(this).find('.animated');
-  var parent = $(this);
-  
-
-  if(parent.attr('data-sequence') != undefined){
-    
-    var firstId = $(this).find('.animated:first').attr('data-id');
-    var number = firstId;
-    var lastId = $(this).find('.animated:last').attr('data-id');
-
-    $(parent).find(".animated[data-id="+ number +"]").addClass('go');
-    number ++;
-    delay = Number(parent.attr('data-sequence'));
-
-    $.doTimeout(delay, function(){
-      $(parent).find(".animated[data-id="+ number +"]").addClass('go');
-      ++number;
-      if(number <= lastId){return true;}
-    });
-  }else{
-    ele.addClass('go');
-  }
-  
-});
-
-$(document.body).on('disappear', '.animatedParent', function(e, $affected) {
-  if(!$(this).hasClass('animateOnce')){
-    $(this).find('.animated').removeClass('go');
-   }
- });
-
- $(document).on(function(){
-  $.force_appear();
- });
-        				</script>
+					    
 					    <a class="btn btn-full" href="#about">
 					    	Comienza ahora
 					    </a>
@@ -431,14 +326,14 @@ $(document.body).on('disappear', '.animatedParent', function(e, $affected) {
 			    </div>
 		  	</section>			
 		    <section id="about1">
-		      	<div class="container">
+		      	<div class="containe">
 		         	<div class="container text-center">
 		          		<h2>Sobre Nosotros</h2>
 		          		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 		        	</div>
-			        <div class="row about-cols">
-			          	<div class="col-md-4 wow fadeInUp">
-			            	<div class="about-col">
+			        <div class="row about-cols animatedParent">
+			          	<div class="col-md-4 fadeInUp animated DownLeft">
+			            	<div class="about-col mvo">
 			              		<div class="img">
 			                		<img src="images/about/about-mission.jpg" alt="" class="img-fluid">
 			                		<div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
@@ -447,8 +342,8 @@ $(document.body).on('disappear', '.animatedParent', function(e, $affected) {
 			              		<p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 			           	 	</div>
 			          	</div>
-			          	<div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
-				            <div class="about-col">
+			          	<div class="col-md-4 fadeInUp animated DownLeft ln">
+				            <div class="about-col mvo">
 				              	<div class="img">
 				                	<img src="images/about/about-plan.jpg" alt="" class="img-fluid">
 				                	<div class="icon"><i class="ion-ios-list-outline"></i></div>
@@ -457,8 +352,8 @@ $(document.body).on('disappear', '.animatedParent', function(e, $affected) {
 				              	<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
 				            </div>
 			          	</div>
-			          	<div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
-			            	<div class="about-col">
+			          	<div class="col-md-4 fadeInUp animated DownLeft sln">
+			            	<div class="about-col mvo">
 			              		<div class="img">
 			                		<img src="images/about/about-vision.jpg" alt="" class="img-fluid">
 			                		<div class="icon"><i class="ion-ios-eye-outline"></i></div>
@@ -860,5 +755,6 @@ $(document.body).on('disappear', '.animatedParent', function(e, $affected) {
 		  	</footer>
 		  	<a class="scrolltop" href="#"><span class="fa fa-angle-up"></span></a>
 		<!-- Footer -->
+		<script src="js/animated.js"></script>
 	</body>
 </html>
