@@ -1073,6 +1073,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #contact h2 {
   font-family: "Raleway", Helvetica, Arial, sans-serif;
   color: #199EB8;
+  margin-left: 20%;
 }
 
 #contact .info i {
@@ -1138,12 +1139,16 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #23c2e1;
 }
 
+.map_responsive iframe{
+    width:100%;
+}
 /* ===================================================
   Footer Styling
   ================================================== */
 .site-footer {
   background-color: #111;
   padding: 0;
+  clear: both;
 }
 
 .site-footer h2, .site-footer p {
@@ -1956,6 +1961,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   #slider_empresas{
     display: none;
   }
+  .map_responsive{
+       display: none;
+    }
 }
 
 @media (max-width: 767px) {
