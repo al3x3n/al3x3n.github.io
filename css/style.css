@@ -1065,10 +1065,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* ==================================================
   Contact Section
   ================================================== */
-/*section #contact{
-  width: 100%;
-}
-*/
 #contact {
   background: #f7f7f7;
   padding: 80px 0;
@@ -1077,6 +1073,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #contact h2 {
   font-family: "Raleway", Helvetica, Arial, sans-serif;
   color: #199EB8;
+  margin-left: 20%;
 }
 
 #contact .info i {
@@ -1142,30 +1139,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #23c2e1;
 }
 
-#contact_aling{
-  width:70%;
-  max-width: 900px;
-  height: auto;
-  margin-left: 0;
-  float: left;
-  padding-bottom: 20px;
-}
-
-.map_responsive{
-  position: relative;
-  float: right;
-  margin-top: -26%;
-  margin-right: 10%;
-  width: 30%;
-  height: 300px;
-  display: inline;
-}
-
 .map_responsive iframe{
-    height:100%;
     width:100%;
 }
-
 /* ===================================================
   Footer Styling
   ================================================== */
