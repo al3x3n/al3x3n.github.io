@@ -46,7 +46,8 @@
 		  		<link href="css/estilos.css" rel="stylesheet">
 		  	<!-- Fonts -->
 		  		<link rel="stylesheet" href="css/font-awesome.min.css" rel="stylesheet">
-		  		<link href="js/toastr/build/toastr.css" rel="stylesheet"/>
+		  		<link href="js/toastr/build/toastr.css" rel="stylesheet"/> 
+		  		<link rel="stylesheet" type="text/css" href="js\lightbox2-master\dist\css\lightbox.css"> 					
 	  	<!-- Css -->
 	  	<!-- Js -->
 		  	<!-- Required JavaScript Libraries -->
@@ -64,11 +65,15 @@
 			  	<script src="lib/stickyjs/sticky.js"></script>
 			  	<script src="lib/parallax/parallax.js"></script>
 				<script src="lib/easing/easing.min.js"></script>
+
 			<!-- mensajes emergentes -->
 			  	<script src="js/toastr/toastr.js"></script>
 			 <!--portafolio-->
 	  	        <script src="js/main.js"></script>
 	  	        <script src="lib/wow/wow.min.js"></script>
+	  	        <script type="text/javascript" src="js\jcarousel-0.3.7\dist/jquery.jcarousel.min.js"></script>
+		        <script type="text/javascript" src="js/slider-portafolio.js"></script>
+		        <script type="text/javascript" src="js\lightbox2-master\dist\js\lightbox.js"></script>
 				<!-- Template Specisifc Custom Javascript File -->
 			  	<script src="js/custom.js"></script>
 			  	<script src="js/contactform.js"></script>
@@ -219,6 +224,8 @@
 				c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
 			})(document);
 			</script>
+			
+				
 	</head>
 	<body>
 		<!-- NEW MENU -->
@@ -236,7 +243,7 @@
 					<div class="nav-collapse collapse navbar-responsive-collapse">
 						<ul class="nav row nav-menu" id="nav-menu-container">
 							<li data-slide="1" class="col-12 col-sm-2"><a id="menu-link-1" href="#hero" title="Next Section"><span class="icon icon-home"></span> <span class="text">HOME</span></a></li>
-							<li data-slide="2" class="col-12 col-sm-2"><a id="menu-link-2" href="#about" title="Next Section"><span class="icon icon-user"></span> <span class="text">NOSOTROS</span></a></li>
+							<li data-slide="2" class="col-12 col-sm-2"><a id="menu-link-2" href="#about1" title="Next Section"><span class="icon icon-user"></span> <span class="text">NOSOTROS</span></a></li>
 							<li data-slide="3" class="col-12 col-sm-2"><a id="menu-link-3" href="#features" title="Next Section"><span class="icon icon-briefcase"></span> <span class="text">SERVICIOS</span></a></li>
 							<li data-slide="4" class="col-12 col-sm-2"><a id="menu-link-4" href="#portfolio" title="Next Section"><span class="icon icon-gears"></span> <span class="text">PORTAFOLIO</span></a></li>
 							<li data-slide="5" class="col-12 col-sm-2"><a id="menu-link-5" href="#contact" title="Next Section"><span class="icon icon-heart"></span> <span class="text">CONTACTO</span></a></li>
@@ -339,7 +346,7 @@
 			      	</div>
 			    </div>
 		  	</section>	 -->
-		    <section id="about" class="about slide story" data-slide="2">
+		    <section id="about1" class="about slide story" data-slide="2">
 		      	<div class="container">
 		         	<div class="container text-center">
 		          		<h2>Acerca de nosotros</h2>
@@ -535,8 +542,8 @@
 				          		Descripción del Portafolio
 				        	</p>
 				      	</div>
-						<div class="row">
-				          	<div class="col-lg-12">
+						
+				          	<!-- <div class="col-lg-12">
 				            	<ul id="portfolio-flters">
 				              		<li data-filter=".filter-app, .filter-card, .filter-logo, .filter-web" class="filter-active">Cableado Estructirado Voz-Datos</li>
 				              		<li data-filter=".filter-cctv">CCTV</li>
@@ -545,9 +552,11 @@
 				              		<li data-filter=".filter-web">Automatización y detección de humos</li>
 				              		<li data-filter=".filter-web">Instalaciones eléctricas</li>
 				            	</ul>
-				          	</div>
-				        </div>
-        				<div class="row" id="portfolio-wrapper">
+				          	</div>  -->
+				          		          			
+				        
+				        
+        				<!-- <div class="row" id="portfolio-wrapper">
         					<div class="col-lg-3 col-md-6 portfolio-item filter-app w3-content w3-section" style="max-width:500px;">
 				              	<img class="mySlides  " src="images/porta/porta_2.jpg" alt="" style="width:100%">
 				              	<div class="details des_sly " style="width:100%">
@@ -575,18 +584,38 @@
 				                	<h4>Instalaciones</h4>
 				                	<span>Alored dono par</span>
 				              	</div>
-				          	</div>
+				          	</div> -->
 				          	<!-- CCTV -->
-				          		<div class="col-lg-3 col-md-6 portfolio-item filter-cctv w3-content w3-section" style="max-width:500px;">
+				          		<!-- <div class="col-lg-3 col-md-6 portfolio-item filter-cctv w3-content w3-section" style="max-width:500px;">
 				              	<img class="mySlides  " src="images/porta/cableado2.jpg" alt="" style="width:100%">
 				              	<div class="details des_sly " style="width:100%">
 				                	<h4>Instalaciones</h4>
 				                	<span>Alored dono par</span>
 				              	</div>
 				          	</div>
-        				</div>
+        				</div> -->
+        					<div class="wrapper">
+						        <div class="jcarousel-wrapper">
+						            <div class="jcarousel">
+						            <ul>
+						                <li><a href="images/porta/porta_1.jpg" data-lightbox="roadtrip"><img src="images/porta/porta_1.jpg" class="zoom" alt="Image 1" /></li></a>
+						                <li><a href="images/porta/porta_2.jpg" data-lightbox="roadtrip"><img src="images/porta/porta_2.jpg" class="zoom" alt="Image 2" /></li></a>
+						                <li><a href="images/porta/porta_3.jpg" data-lightbox="roadtrip"><img src="images/porta/porta_3.jpg" class="zoom" alt="Image 3" /></li></a>
+						                <li><a href="images/porta/porta_4.jpg" data-lightbox="roadtrip"><img src="images/porta/porta_4.jpg" class="zoom" alt="Image 4" /></li></a>
+						                <li><a href="images/porta/porta_5.png" data-lightbox="roadtrip"><img src="images/porta/porta_5.png" class="zoom" alt="Image 5" /></li></a>
+						                <li><a href="images/porta/porta_6.png" data-lightbox="roadtrip"><img src="images/porta/porta_6.png" class="zoom" alt="Image 6" /></li></a>
+						                <li><a href="images/porta/porta_7.png" data-lightbox="roadtrip"><img src="images/porta/porta_7.png" class="zoom" alt="Image 7" /></li></a>
+						                <li><a href="images/porta/porta_8.png" data-lightbox="roadtrip"><img src="images/porta/porta_8.png" class="zoom" alt="Image 8" /></li></a>
+						            </ul>
+						        </div>
+						        <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+						        <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+
+						        <p class="jcarousel-pagination"></p>
+						    </div> 
+						    </div>  
 					</section>
-							<script type="text/javascript">           	
+							<!-- <script type="text/javascript">           	
 							    var myIndex = 0;
 								carousel();
 								function carousel() {
@@ -613,7 +642,7 @@
 		    						$(x).css("display","block"); 
 		    						setTimeout(varios, 9000);    
 								}
-							</script>
+							</script> -->
 				<!-- Portfolio -->
 			</div>
 		<!-- Parallax -->
