@@ -1006,7 +1006,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     display: block;
     max-width: 100%;
     height: 200px ;
-    transition: all 2s;
+    transition: all 5s;
 }
 
 .jcarousel-control-prev,
@@ -1081,7 +1081,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 .zoom:hover{
    transform: scale(1.2);
-   transition: all 2s;
+   transition: all 5s; 
 }
 
 /* ==================================================

@@ -47,7 +47,11 @@
 		  	<!-- Fonts -->
 		  		<link rel="stylesheet" href="css/font-awesome.min.css" rel="stylesheet">
 		  		<link href="js/toastr/build/toastr.css" rel="stylesheet"/> 
-		  		<link rel="stylesheet" type="text/css" href="js\lightbox2-master\dist\css\lightbox.css"> 					
+		  		<link rel="stylesheet" type="text/css" href="js\lightbox2-master\dist\css\lightbox.css">
+		  	<!-- coverflow -->
+		  		<link type="text/css" href="coverflow-master/tests/css/visual.css" rel="stylesheet" />
+				<link type="text/css" href="coverflow-master/src/css/coverflow.css" rel="stylesheet" />
+				<link type="text/css" href="coverflow-master/libs/jquery-ui/themes/base/jquery.ui.core.css" rel="stylesheet" /> 					
 	  	<!-- Css -->
 	  	<!-- Js -->
 		  	<!-- Required JavaScript Libraries -->
@@ -65,7 +69,34 @@
 			  	<script src="lib/stickyjs/sticky.js"></script>
 			  	<script src="lib/parallax/parallax.js"></script>
 				<script src="lib/easing/easing.min.js"></script>
+			<!-- coverflow -->
+				<!-- <script src="../../libs/jquery-ui/jquery-1.10.2.js"></script> -->
+				<script src="coverflow-master/libs/jquery-ui/ui/jquery.ui.core.js"></script>
+				<script src="coverflow-master/libs/jquery-ui/ui/jquery.ui.widget.js"></script>
+				<script src="coverflow-master/libs/jquery-ui/ui/jquery.ui.effect.js"></script>
 
+				<script src="coverflow-master/libs/jquery.hammer.js"></script>
+
+				<script src="coverflow-master/tests/lib/debounce.js"></script>
+
+				<script src="coverflow-master/src/js/support.core.js"></script>
+				<script src="coverflow-master/src/js/support.transform3d.js"></script>
+				<script src="coverflow-master/src/js/renderer.3d.js"></script>
+				<script src="coverflow-master/src/js/renderer.classic.js"></script>
+				<script src="coverflow-master/src/js/coverflow.js"></script>
+
+				<script>
+
+				$(function() {
+				var $el = $( '.coverflow' ).coverflow({
+							renderer : "ThreeD"
+						});
+
+					$( window ).resize( debounce( function() {
+						$el.coverflow();
+					}, 20, true ));
+				});
+				</script>
 			<!-- mensajes emergentes -->
 			  	<script src="js/toastr/toastr.js"></script>
 			 <!--portafolio-->
@@ -594,7 +625,7 @@
 				              	</div>
 				          	</div>
         				</div> -->
-        					<div class="wrapper">
+        					<!-- <div class="wrapper">
 						        <div class="jcarousel-wrapper">
 						            <div class="jcarousel">
 						            <ul>
@@ -613,8 +644,28 @@
 
 						        <p class="jcarousel-pagination"></p>
 						    </div> 
-						    </div>  
-					</section>
+						    </div>  --> 
+						    <div style="height:400px;">
+								<div class="demo">
+									<div class="wrapper">
+										<div class="coverflow">
+								            <img src="coverflow-master/demo/img/gorillaz-plasticbeach.jpg" data-artist="Gorillaz" data-album="Plastic Beach"/>
+											<img src="coverflow-master/demo/img/kingsofleon-comearoundsunshine.jpg" data-artist="Kings Of Leon" data-album="Come Around Sunshine"/>
+											<img src="coverflow-master/demo/img/kidrock-bornfree.jpg" data-artist="Kid Rock" data-album="Born Free"/>
+											<img src="coverflow-master/demo/img/recovery-recovery.jpg" data-artist="Eminem" data-album="Recovery"/>
+											<img src="coverflow-master/demo/img/lilwayne-iamnotahumanbeing.jpg" data-artist="Lil Wayne" data-album="I Am Not A Human Being"/>
+											<img src="coverflow-master/demo/img/taylorswift-speaknow.jpg" data-artist="Taylor Swift" data-album="Speak Now"/>
+											<img src="coverflow-master/demo/img/thebandperry-thebandperry.jpg" data-artist="The Band Perry" data-album="The Band Perry"/>
+											<img src="coverflow-master/demo/img/maroon5-handsallover.jpg" data-artist="Maroon 5" data-album="Hands All Over"/>
+											<img src="coverflow-master/demo/img/mychemicalromance-dangerdays.jpg" data-artist="My Chemical Romance" data-album="Danger Days"/>
+											<img src="coverflow-master/demo/img/ironmaiden-thefinalfrontier.jpg" data-artist="Iron Maiden" data-album="The Final Frontier"/>
+											<img src="coverflow-master/demo/img/order of the black - black label society.jpg" data-artist="Order Of The Black" data-album="Black Label Society"/>
+											<img src="coverflow-master/demo/img/usher-raymondvraymond.jpg" data-artist="Usher" data-album="Raymond V Raymond"/>
+										</div>
+									</div>
+								</div>
+							</div>
+												</section>
 							<!-- <script type="text/javascript">           	
 							    var myIndex = 0;
 								carousel();
