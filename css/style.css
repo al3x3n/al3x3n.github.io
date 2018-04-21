@@ -111,6 +111,13 @@ a:hover {
 /* ==================================================
   Hero Styling
 ================================================== */
+#log_principal{
+    display: initial;
+  }
+  #log_secundario{
+    display: none;
+  }
+  
 .hero {
   display: table;
   position: relative;
@@ -143,7 +150,7 @@ a:hover {
 }
 
 .hero-brand {
-  margin-bottom: 75px;
+  margin-top: 50px;
   display: inline-block;
 }
 
@@ -2085,6 +2092,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   .map_responsive{
        display: none;
     }
+  #log_principal{
+    display: none;
+  }
+  #log_secundario{
+    display: initial;
+  }
 }
 
 @media (max-width: 767px) {
