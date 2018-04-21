@@ -170,11 +170,11 @@ a:hover {
 }
 
 .col-md-12 h1:hover{
-	color:  #0000FF;
+	color:  #199EB8;
 }
 
 .tagline:hover{
-   color:  #0000FF;
+   color:  #199EB8;
 }
 
 @media (max-width: 768px) {
@@ -347,6 +347,10 @@ a:hover {
 
 .container p span{
 	color: #FF8000;
+}
+
+#about1 h2{
+  color: #199EB8;
 }
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -621,7 +625,18 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-radius: 50%;
   font-weight: 700;
 }
-
+.section-heading{
+  color: #199EB8;
+}
+.portfolio-caption{
+  color: #199EB8;
+}
+.modal-title{
+  color: white;
+}
+.modal-header{
+  background-color: #199EB8;
+}
 /* ==================================================
   Parallax Styling
   ================================================== */
@@ -629,12 +644,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
   height: auto;/*490px;*/
   overflow: hidden;
-  padding-top: 85px;
+  padding-top: 85px; 
 }
 
 .block h2 {
   text-transform: uppercase;
-  margin-bottom: 15px;
+  margin-top: -35px;
 }
 
 .block p {
@@ -1520,7 +1535,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .clientes h2 {
-  color: #212529;
+  color: #199EB8;
 }
 
 #clients .owl-dot {
@@ -1563,7 +1578,7 @@ body.mobile-nav-active #mobile-nav-toggle {
       position: relative;
   }
   #about1 .about-col h2 {
-      color: #000;
+      color: #199EB8;
       text-align: center;
       font-weight: 700;
       font-size: 20px;
