@@ -1217,6 +1217,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #contact .info p {
   padding: 0 0 10px 50px;
   line-height: 24px;
+  color: white;
 }
 
 #contact .form #sendmessage {
