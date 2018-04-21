@@ -117,7 +117,7 @@ a:hover {
   #log_secundario{
     display: none;
   }
-  
+
 .hero {
   display: table;
   position: relative;
@@ -2089,9 +2089,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   #slider_empresas{
     display: none;
   }
-  .map_responsive{
+  /*.map_responsive{
        display: none;
-    }
+    }*/
   #log_principal{
     display: none;
   }
