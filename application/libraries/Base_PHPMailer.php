@@ -20,23 +20,27 @@ class Base_PHPMailer {
     }
 
 	public function Base_PHPMailer(){
-		echo '<pre>';
-		print_r($this->_data);
-		echo '</pre>';
 		$mail = new PHPMailer();
 		$mail->isSMTP();
-		$mail->SMTPDebug = 2;
+		//$mail->SMTPDebug = 1;
 		$mail->Host = 'smtp.gmail.com';
 		$mail->Port = 465;
 		$mail->SMTPSecure = 'ssl';
 		$mail->SMTPAuth = true;
 		$mail->Username = "alejandro.enciso@entrepids.com";
 		$mail->Password = "aenciso02";
-		$mail->setFrom('aalvaro.encisoj@outlook.com', 'Solicitud de información');
+		$mail->setFrom('alejandro.enciso@entrepids.com', 'Solicitud de informacion');
 		$mail->addAddress('aalvaro.encisoj@outlook.com',$this->_data['name'] );
 		$mail->Subject = $this->_data['subject'];
 		$mail->AltBody = 'Este correo es solo informativo';
 		$mail->MsgHTML($this->_data['message']);
+		$mail->SMTPOptions = array(
+		   'ssl' => array(
+		     'verify_peer' => false,
+		     'verify_peer_name' => false,
+		     'allow_self_signed' => true
+		    )
+		);
 
 		if (!$mail->send()) {
 		    $mail->ErrorInfo;
