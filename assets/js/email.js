@@ -25,9 +25,9 @@ function sendMail(){
                 url:   baseUrl+'/email',
                 dataType: 'json',
                 beforeSend: function () {
-                        $('#loader').show();
-                        $('body').addClass('opacity-loader');
-                        $('#enviar').prop('disabled',true);
+                        //$('#loader').show();
+                        //$('body').addClass('opacity-loader');
+                        //$('#enviar').prop('disabled',true);
                 },
                 success:  function (response) {
                         if(response.succes){
@@ -35,9 +35,9 @@ function sendMail(){
                         }else{
                              toastr.error(response.msg);   
                         }
-                        $('#loader').hide();
-                        $('body').removeClass('opacity-loader');
-                        $('#enviar').prop('disabled',false);
+                        //$('#loader').hide();
+                        //$('body').removeClass('opacity-loader');
+                        //$('#enviar').prop('disabled',false);
                         
                         /*$("#resultado").html(response.succes);
                         $("#resultado").html(response.msg);*/

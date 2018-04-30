@@ -1,1 +1,1 @@
-var baseUrl= window.location.protocol + "//" + window.location.host + "/redes_gesa";
+var baseUrl= window.location.protocol + "//" + window.location.host + "/redes_gesa_original";
