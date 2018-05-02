@@ -15,15 +15,15 @@
 				
 				<div class="nav-collapse collapse navbar-responsive-collapse">
 					<ul class="nav row nav-menu" id="nav-menu-container">
-						<li data-slide="1" class="col-12 col-sm-2"><a id="menu-link-1" href="#hero" title="Next Section"><span class="icon icon-home"></span> <span class="text">HOME</span></a></li>
-						<li data-slide="2" class="col-12 col-sm-2"><a id="menu-link-2" href="#about1" title="Next Section"><span class="icon icon-user"></span> <span class="text">NOSOTROS</span></a></li>
+						<li data-slide="1" class="col-12 col-sm-2"><a id="menu-link-1" href="#hero" title="Next Section"><span class="icon icon-home"></span> <span class="text">INICIO</span></a></li>
+						<li data-slide="2" class="col-12 col-sm-2"><a id="menu-link-2" href="#about1" title="Next Section"><span class="fa fa-address-card"></span> <span class="text">NOSOTROS</span></a></li>
 						<li data-slide="3" class="col-12 col-sm-2"><a id="menu-link-3" href="#features" title="Next Section"><span class="icon icon-briefcase"></span> <span class="text">SERVICIOS</span></a></li>
-						<li data-slide="4" class="col-12 col-sm-2"><a id="menu-link-4" href="#portfolio" title="Next Section"><span class="icon icon-gears"></span> <span class="text">PORTAFOLIO</span></a></li>
-						<li data-slide="5" class="col-12 col-sm-2"><a id="menu-link-5" href="#contact" title="Next Section"><span class="icon icon-heart"></span> <span class="text">CONTACTO</span></a></li>
+						<li data-slide="4" class="col-12 col-sm-2"><a id="menu-link-4" href="#portfolio" title="Next Section"><span class="fa fa-film"></span> <span class="text">PORTAFOLIO</span></a></li>
+						<li data-slide="5" class="col-12 col-sm-2"><a id="menu-link-5" href="#contact" title="Next Section"><span class="fa fa-envelope-open"></span> <span class="text">CONTACTO</span></a></li>
 					</ul>
-					<div class="row">
+					<!-- <div class="row">
 						<div class="col-sm-2 active-menu"></div>
-					</div>
+					</div> -->
 				</div><!-- /.nav-collapse -->
 			</div><!-- /.container -->
 		</div><!-- /.navbar -->
@@ -65,6 +65,8 @@
 	          			Somos una empresa 100% mexicana que inició operaciones en 1989 en el estado de Aguascalientes, Ags. Con un contrato por parte de CONSTRUCCIONES TELEFÓNICAS MEXICANA, S.A. DE C.V. para hacernos cargo de una parte del programa de Redes de TEL-MEX. En ese tiempo se realizaron obras de redes principalmente en los estados de Aguascalientes y Zacatecas. Nos especializamos en los servicios de Cableado Estructurado Voz-Datos, Redes de Fibra Óptica, Telefonía Convencional, Soporte Técnico en Redes LAN, Servicio Preventivo, Instalaciones Eléctricas de Energía Regulada, Sistemas de Seguridad. Ademas de que somos <span>PARNER DE CISCO.</span>
 	          		</p>
 	        	</div>
+	        	<br>
+	        	<br>
 		        <div class="row about-cols animatedParent">
 		          	<div class="col-md-4 fadeInUp animated DownLeft">
 		            	<div class="about-col mvo">
@@ -117,7 +119,7 @@
 				        <div class="row">
 				          <div class="col-lg-12 text-center">
 				            <h2 class="section-heading text-uppercase">Servicios</h2>
-				            <h3 class="section-subheading text-muted">Servicios que ofrecemos.</h3>
+				            <!-- <h3 class="section-subheading text-muted">Servicios que ofrecemos.</h3> -->
 				          </div>
 				        </div>
 				        <div class="row">
@@ -222,7 +224,7 @@
 					        </button>
 					      </div>
 					      <div class="modal-body">
-					        <p>Contamos con certificación de AVAYA SYSTIMAX (AT&T),  SIEMON,  WIREMOLD Y TYCO AMP; ALCATEL, NEXANS CHASTWORTH, HUBBELL Y LEVITON.</p>
+					        <p>Nos especializamos en hacer instalaciones de red basandonos en estándares, para que tu instalación sea mas flexible y se pueda brindar una amplia capacidad de crecimiento en base a tus necesidades.</p>
 					      </div>
 					    </div>
 					  </div>
@@ -445,25 +447,16 @@
   	<!-- Contact  -->
   		<section id="contact" class="slide story" data-slide="5">
             <div class="container">
+                <!-- <div class="row">
+                                    </div>  -->   
                 <div class="row">
-                    <div class="col-md-12 text-starat">
-                        <h2 class="section-title">Contáctanos</h2>
-                    </div>
-                </div>    
-                <div class="row">
-                    <div class="col-lg-7">
+                	<div class="col-lg-3 col-md-2"></div>
+                    <div class="col-lg-9">
                         <div class="row">
-                            <div class="col-lg-6 col-md-4 info">
-                                <div>
-                                    <i class="fa fa-envelope"></i>
-                                    <p>atencion@redesgesa.com</p>
-                                </div>
-                                <div>
-                                    <i class="fa fa-phone"></i>
-                                    <p>53868019</p>
-                                </div>
-                            </div>
-                             <div class="col-lg-6 col-md-8 form">
+                        	<div class="col-md-12 text-starat">
+		                        <h2 class="section-title">Contáctanos</h2>
+		                    </div>
+                            <div class="col-lg-7 col-md-2 form">
                                 <div id="sendmessage">Your message has been sent. Thank you!</div>
                                 <div id="errormessage"></div>
                                 <form action="" method="post" role="form" class="contactForm">
@@ -501,11 +494,12 @@
                             <div class="lading"></div>
                         </div>
                     </div>
-                    <div class="col-lg-5">
-                        <div class="map_responsive">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.7919365195926!2d-99.18266628571763!3d19.464535444703902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f89aec0b3a35%3A0x31d76185d40e186e!2sCalle+Texcoco+135%2C+Claveria%2C+02080+Ciudad+de+M%C3%A9xico%2C+CDMX!5e0!3m2!1ses-419!2smx!4v1523647661720" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-                        </div>
-                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="col-lg-12">
+                <div class="map_responsive">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.7919365195926!2d-99.18266628571763!3d19.464535444703902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f89aec0b3a35%3A0x31d76185d40e186e!2sCalle+Texcoco+135%2C+Claveria%2C+02080+Ciudad+de+M%C3%A9xico%2C+CDMX!5e0!3m2!1ses-419!2smx!4v1523647661720" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
             </div>
         </section>

@@ -170,11 +170,11 @@ a:hover {
 }
 
 .col-md-12 h1:hover{
-	color:  #199EB8;
+	/*color:  #199EB8;*/
 }
 
 .tagline:hover{
-   color:  #199EB8;
+   /*color:  #199EB8;*/
 }
 
 @media (max-width: 768px) {
@@ -1668,18 +1668,19 @@ body.mobile-nav-active #mobile-nav-toggle {
 /*New Menu*/
   .navbar {
       background-color: #e4e6e5;
-      background-color: rgba( 228, 230, 229, .85 );
+      /*background-color: rgba( 228, 230, 229, .85 );*/
+      background-color: rgba( 79, 158, 185);
       border-bottom: 0 none;
       font-size: 12px;
       transition: .25s all linear;
   }
   .navbar.inv {
-    background-color: rgba( 0, 0, 0, .5 );
+    /*background-color: rgba( 0, 0, 0, .5 );*/
     border-bottom: 1px solid #bfbfbf;
   }
 
   .navbar .nav a {
-    color: #5f5f5f;
+    color: #fff;
     /*font-family: "Titillium Web", sans-serif;*/
     font-weight: 600;
     transition: all .5 linear;
@@ -2034,14 +2035,30 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 .service-modal{
   /*background: #ffffff;*/
-  top: 25%;
-        left: 15%;
-        width: 70%;
-        height: 70%;
-        padding: 16px;
+  top: 10%;
+  left: 15%;
+  width: 70%;
+  height: 80%;
+  padding: 16px;
 }
 .modal-content{
-  background: #ffffff !important;
+      position: relative;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 6px;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+}
+button.close {
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
 }
 /* ============================================================================================================================================================
   Responsive Styling
@@ -2225,4 +2242,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   .navbar-inverse .navbar-link:hover {
     color: #ffffff;
   }
-/*New Menu
+/*New Menu*/
+
+.form-control:focus {
+    border-color: #66afe9 !important;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+}

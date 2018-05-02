@@ -29,8 +29,8 @@ class Base_PHPMailer {
 		$mail->SMTPAuth = true;
 		$mail->Username = "alejandro.enciso@entrepids.com";
 		$mail->Password = "aenciso02";
-		$mail->setFrom('alejandro.enciso@entrepids.com', 'Solicitud de informacion');
-		$mail->addAddress('aalvaro.encisoj@outlook.com',$this->_data['name'] );
+		$mail->setFrom('soporte@redesgesa.com', 'Solicitud de informacion');
+		$mail->addAddress($this->_data['email'] ,$this->_data['name'] );
 		$mail->Subject = $this->_data['subject'];
 		$mail->AltBody = 'Este correo es solo informativo';
 		$mail->MsgHTML($this->_data['message']);

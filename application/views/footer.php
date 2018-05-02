@@ -34,7 +34,7 @@
 			      	</div>
 			    </div>
 		  	</footer>
-		  	<a class="scrolltop" href="#"><span class="fa fa-angle-up"></span></a>
+		  	<!-- <a class="scrolltop" href="#"><span class="fa fa-angle-up"></span></a> -->
 		<!-- Footer -->
 	</body>
 </html>
