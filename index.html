@@ -41,9 +41,6 @@
 		  		<link href="lib/animate/animate.min.css" rel="stylesheet">
 		  	<!-- Iconos -->
 		  		<link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-		  	<!-- Main Stylesheet File -->
-		  		<link href="css/style.css" rel="stylesheet">
-		  		<link href="css/estilos.css" rel="stylesheet">
 		  	<!-- Fonts -->
 		  		<link rel="stylesheet" href="css/font-awesome.min.css" rel="stylesheet">
 		  		<link href="js/toastr/build/toastr.css" rel="stylesheet"/> 
@@ -54,6 +51,16 @@
 				<link type="text/css" href="coverflow-master/libs/jquery-ui/themes/base/jquery.ui.core.css" rel="stylesheet" /> 
 			<!-- Servcios -->					
 				<link href="css/agency.min.css" rel="stylesheet">
+			<!-- LAYER -->
+				<link rel='stylesheet' href='css/layer/layersliderd70e.css' type='text/css' media='all' />
+				<link rel='stylesheet' href='css/layer/stylec66d.css' type='text/css' media='all' />
+				<link rel='stylesheet' href='css/layer/showmec66d.css' type='text/css' media='all' />
+				<link rel='stylesheet' href='css/layer/km-uic66d.css' type='text/css' media='all' /> 
+				<script type='text/javascript' src='css/layer/js/jqueryb8ff.js'></script> 
+			<!-- Main Stylesheet File -->
+		  		<link href="css/style.css" rel="stylesheet">
+		  		<link href="css/estilos.css" rel="stylesheet">
+				<!-- <script type='text/javascript' src='css/layer/js/jquery-migrate.min330a.js'></script> --> 
 	  	<!-- Css -->
 	  	<!-- Js -->
 		  	<!-- Required JavaScript Libraries -->
@@ -237,13 +244,13 @@
 				<!-- analytics -->
 					<!-- Global site tag (gtag.js) - Google Analytics -->
 					<script async="" src="//www.google-analytics.com/analytics.js"></script>
-						<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114187810-1"></script>
-						<script>
-						  window.dataLayer = window.dataLayer || [];
-						  function gtag(){dataLayer.push(arguments);}
-						  gtag('js', new Date());
-						  gtag('config', 'UA-114187810-1');
-						</script>
+					<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114187810-1"></script>
+					<script>
+						window.dataLayer = window.dataLayer || [];
+						function gtag(){dataLayer.push(arguments);}
+						gtag('js', new Date());
+						gtag('config', 'UA-114187810-1');
+					</script>
 				<!-- analytics -->
 			<!-- Includes JS-->
 		<!-- Js -->
@@ -263,17 +270,13 @@
 	</head>
 	<body>
 		<!-- NEW MENU -->
-			<div class="navbar navbar-fixed-top" data-activeslide="1">
+			<!-- <div class="navbar navbar-fixed-top" data-activeslide="1">
 				<div class="container">
-				
-					<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					
-					
 					<div class="nav-collapse collapse navbar-responsive-collapse">
 						<ul class="nav row nav-menu" id="nav-menu-container">
 							<li data-slide="1" class="col-12 col-sm-2"><a id="menu-link-1" href="#hero" title="Next Section"><span class="icon icon-home"></span> <span class="text">HOME</span></a></li>
@@ -285,10 +288,177 @@
 						<div class="row">
 							<div class="col-sm-2 active-menu"></div>
 						</div>
-					</div><!-- /.nav-collapse -->
-				</div><!-- /.container -->
-			</div><!-- /.navbar -->
+					</div>
+				</div>
+			</div> -->
 		<!-- NEW MENU -->
+		<!-- PRUEBA -->
+		<div id="outer-wrapper">
+			<header>
+				<div class="outer">
+					<div class="sizer">
+						<div class="inner"> 
+							<a href="index.html">
+								<div id="layerslider-logo"></div>
+								<!-- <img src="images/logo_circulos.png" class="img-logo"> -->
+								 	<img id="contenedor-imagen" src="images/logo_circulos.png">
+								<style>
+								#contenedor-imagen{
+								     float: left;
+								    transform: translateY(10px);
+								    width: 39px;
+								    margin: 0 20px 0 30px;
+								}
+								</style>
+								<h1>Redes Gesa</h1>
+								<!-- <h2>6</h2>  -->
+							</a>
+							<nav class="km-ui-text-underline"> 
+								<a href="index.html">Inicio</a>
+								<a href="sliders/index.html">¿Quienes somos?</a>
+								<a href="premium/index.html">Servicios</a>
+								<!-- <a href="#" data-showme-link="help" data-showme-trigger="hover" data-showme-settings="margin: 15; horizontal: right; vertical: bottom; theme: dark; effect: flip;" class="no-underline">Docs &amp; Help</a> -->
+								<a data-showme-link="purchase" data-showme-trigger="hover" data-showme-settings="margin: 15; horizontal: right; vertical: bottom; theme: light; effect: flip;" target="_blank" class="button" href="http://codecanyon.net/cart/add_items?ref=kreatura&amp;item_ids=1362246">Contacto</a>
+							</nav>
+							<div id="mobilemenu"> 
+								<select>
+									<option data-url="/" value="Home">Home</option>
+									<option data-url="/sliders/" value="Explore Sliders">Explore Sliders</option>
+									<option data-url="/premium/" value="Premium Benefits">Premium Benefits</option>
+									<option data-url="/documentation/">End-User Documentation</option>
+									<option data-url="/developers/">Developer Documentation</option><option data-url="/release-log/">Release Log</option><option data-url="https://kreatura.ticksy.com/articles/">Knowledge Base</option>
+									<option data-url="https://kreatura.ticksy.com/">Open Support Ticket</option>
+									<option data-url="http://codecanyon.net/cart/add_items?ref=kreatura&amp;item_ids=1362246" value="Purchase">Purchase</option>
+								</select>
+								<div> 
+									<i></i>
+									<i></i> 
+									<i></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> 
+			</header>
+			<div class="km-showme" id="purchase" class="purchase-popup">					
+				<a href="http://codecanyon.net/cart/add_items?ref=kreatura&amp;item_ids=1362246" data-showme-parallax="1.5" id="wp"> 
+					<img src="images/prueba/wordpress-h.png" alt=""> 
+				</a>
+				<p data-showme-parallax="1.5"></p> 
+				<a href="http://codecanyon.net/cart/add_items?ref=kreatura&amp;item_ids=922100" data-showme-parallax="1.5" id="jq"> 
+					<img src="images/prueba4/jquery-h.png" alt=""> 
+				</a>
+			</div>
+			<div class="km-showme" id="purchase-inside-slider" class="purchase-popup">					
+				<a href="http://codecanyon.net/cart/add_items?ref=kreatura&amp;item_ids=922100" data-showme-parallax="1.5" id="jq"> 
+					<img src="images/prueba4/jquery-h.png" alt=""> 
+				</a> 
+				<a href="http://codecanyon.net/cart/add_items?ref=kreatura&amp;item_ids=1362246" data-showme-parallax="1.5" id="wp"> 
+					<img src="images/prueba/wordpress-h.png" alt=""> 
+				</a>
+			</div>
+			<div class="km-showme" id="help" class="help-popup">
+				<ul data-showme-parallax="1.5">
+					<li> 
+						<a href="documentation/index.html">End-User Documentation</a>
+					</li>
+					<li> 
+						<a href="developers/index.html">Developer Documentation</a>
+					</li>
+					<li> 
+						<a href="release-log/index.html">Release Log</a>
+					</li>
+					<li> 
+						<a href="https://kreatura.ticksy.com/articles/" target="_blank">Knowledge Base</a>
+					</li>
+					<li> 
+						<a href="https://kreatura.ticksy.com/" target="_blank">Open Support Ticket</a>
+					</li>
+				</ul>
+			</div> 
+			<main> 
+				<div class="slider">
+					<div id="layerslider_50" class="ls-wp-container fitvidsignore" style="width:1500px;height:100vh;margin:0 auto;margin-bottom: 0px;">
+						<div class="ls-slide" data-ls="bgcolor:#000000;kenburnsscale:1.2;parallaxtype:3d;parallaxaxis:x;parallaxrotate:-10;">
+							<div style="top:0px;left:0px;text-align:initial;font-weight:400;font-style:normal;text-decoration:none;width:100%;height:100%;background:#ffffff;" class="ls-l" data-ls="showinfo:1;offsetyin:-100%;fadein:false;offsetxout:-100sw;durationout:1;startatout:transitioninend + 5000;easingout:easeInExpo;fadeout:false;position:fixed;">
+							</div>
+							<div style="background: rgba(0,0,0,1); background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(92,107,63,1) 100%); background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(100%, rgba(92,107,63,1))); background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(92,107,63,1) 100%); background: -o-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(92,107,63,1) 100%); background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(92,107,63,1) 100%); background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(92,107,63,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#5c6b3f', GradientType=0 );top:0px;left:0px;text-align:initial;font-weight:400;font-style:normal;text-decoration:none;width:100%;height:100%;" class="ls-l" data-ls="showinfo:1;offsetyin:-100%;delayin:4600;fadein:false;offsetxout:-100sw;easingout:easeInExpo;fadeout:false;position:fixed;">
+							</div>
+							<div style="background: rgba(0,0,0,.5);top:0px;left:0px;text-align:initial;font-weight:400;font-style:normal;text-decoration:none;width:100%;height:100%;" class="ls-l" data-ls="showinfo:1;offsetyin:-100%;delayin:4600;fadein:false;offsetxout:-100sw;easingout:easeInExpo;fadeout:false;position:fixed;">
+							</div>
+							<p style="top:40%;left:50%;text-align:initial;font-weight:300;font-style:normal;text-decoration:none;font-family:Nunito;font-size:75px;color:#333333;" class="ls-l" data-ls="showinfo:1;offsetyin:-50%;durationin:1500;delayin:500;easingin:easeOutQuint;rotatexin:60;scalexin:.65;scaleyin:.8;texttransitionout:true;texttypeout:chars_asc;textshiftout:25;textdurationout:600;textstartatout:allinend - 500;textrotatexout:90;texttransformoriginout:50% 50% 30px;">Bienvenido a Redes Gesa</p>
+							<p style="top:40%;left:50%;text-align:initial;font-weight:300;font-style:normal;text-decoration:none;font-family:Nunito;font-size:75px;color:#333333;" class="ls-l" data-ls="showinfo:1;transitionin:false;texttransitionin:true;texttypein:chars_asc;textshiftin:25;textdurationin:600;textstartatin:transitioninstart + 1400;textrotatexin:-90;texttransformoriginin:50% 50% 30px;texttransitionout:true;texttypeout:chars_asc;textshiftout:25;textdurationout:600;textstartatout:textinend + 500;textrotatexout:90;texttransformoriginout:50% 50% 30px;">Haremos de tu lugar, un lugar mas seguro</p>
+							<!-- <p style="top:55%;left:50%;text-align:initial;font-weight:400;font-style:normal;text-decoration:none;font-family:Lato;color:rgba(232, 31, 0, 0.93);font-size:490px;height:370px;line-height:340px;" class="ls-l" data-ls="showinfo:1;offsetyin:-100lh;durationin:1200;delayin:2000;easingin:easeOutQuint;clipin:100% 0 0 0;offsetyout:20sh;startatout:transitioninend + 800;easingout:easeInQuint;scalexout:.5;scaleyout:2;transformoriginout:50% -50% 0;">6</p> -->
+							<p style="left:50%;text-align:initial;font-weight:300;font-style:normal;text-decoration:none;font-family:Nunito;font-size:90px;color:#333333;top:55%;height:55px;line-height:45px;" class="ls-l" data-ls="showinfo:1;offsetyin:-100lh;durationin:1200;delayin:2500;easingin:easeOutQuint;clipin:100% 0 0 0;startatout:slidechangeonly + 0;texttransitionout:true;texttypeout:chars_center;textoffsetyout:10sh;textdurationout:750;texteasingout:easeInQuint;textrotateout:0|-5|5|-10|10|-15|15;textscaleyout:4;texttransformoriginout:50% 0% 0;">¡ Comencemos !</p>
+							<img width="600" height="338" src="images/prueba2/2.jpg" class="ls-l" alt=""  sizes="(max-width: 600px) 100vw, 600px" style="box-shadow: 0 10px 30px rgba(0,0,0,.4);top:-20%;left:10%;text-align:initial;font-weight:400;font-style:normal;text-decoration:none;border-radius:10px;style:box-shadow: 0 10px 30px rgba(0,0,0,.4);;" data-ls="showinfo:1;durationin:0;delayin:2000;offsetxout:-20sw;easingout:easeInBack;rotateout:-1;skewxout:6;loop:true;loopoffsety:140sh;loopduration:12750;loopstartat:allinend + 4000;looprotate:random(-60,60);loopcount:-1;looptransformperspective:2000;parallax:true;parallaxlevel:10;position:fixed;">
+							<img width="600" height="338" src="images/prueba2/banner2-1024x680.jpg" class="ls-l" alt=""  sizes="(max-width: 600px) 100vw, 600px" style="box-shadow: 0 10px 30px rgba(0,0,0,.4);top:-20%;left:90%;text-align:initial;font-weight:400;font-style:normal;text-decoration:none;border-radius:10px;style:box-shadow: 0 10px 30px rgba(0,0,0,.4);;" data-ls="showinfo:1;durationin:0;delayin:2000;offsetxout:-30sw;easingout:easeInBack;rotateout:-2;skewxout:9;loop:true;loopoffsety:140sh;loopduration:12250;loopstartat:allinend + 5000;looprotate:random(-60,60);loopcount:-1;looptransformperspective:2000;parallax:true;parallaxlevel:10;position:fixed;">
+							<img width="600" height="338" src="images/prueba2/cctv.jpg" class="ls-l" alt=""  sizes="(max-width: 600px) 100vw, 600px" style="box-shadow: 0 10px 30px rgba(0,0,0,.4);top:-20%;left:20%;text-align:initial;font-weight:400;font-style:normal;text-decoration:none;border-radius:10px;style:box-shadow: 0 10px 30px rgba(0,0,0,.4);;" data-ls="showinfo:1;durationin:0;delayin:2000;offsetxout:-40sw;easingout:easeInBack;rotateout:-2;skewxout:12;loop:true;loopoffsety:140sh;loopduration:12500;loopstartat:allinend + 2000;looprotate:random(-60,60);loopcount:-1;looptransformperspective:2000;parallax:true;parallaxlevel:15;position:fixed;">
+							<img width="600" height="338" src="images/prueba2/default-cctv-dealers-6.jpg" class="ls-l" alt=""  sizes="(max-width: 600px) 100vw, 600px" style="box-shadow: 0 10px 30px rgba(0,0,0,.4);top:-20%;left:80%;text-align:initial;font-weight:400;font-style:normal;text-decoration:none;border-radius:10px;style:box-shadow: 0 10px 30px rgba(0,0,0,.4);;" data-ls="showinfo:1;durationin:0;delayin:2000;offsetxout:-50sw;easingout:easeInBack;rotateout:-3;skewxout:15;loop:true;loopoffsety:140sh;loopduration:13750;loopstartat:allinend + 1000;looprotate:random(-60,60);loopcount:-1;looptransformperspective:2000;parallax:true;parallaxlevel:15;position:fixed;">
+							<img width="600" height="338" src="images/prueba2/alarmsysteem-plaatsen.jpg" class="ls-l" alt=""  sizes="(max-width: 600px) 100vw, 600px" style="box-shadow: 0 10px 30px rgba(0,0,0,.4);top:-20%;left:30%;text-align:initial;font-weight:400;font-style:normal;text-decoration:none;border-radius:10px;style:box-shadow: 0 10px 30px rgba(0,0,0,.4);;" data-ls="showinfo:1;durationin:0;delayin:2000;offsetxout:-60sw;easingout:easeInBack;rotateout:-3;skewxout:18;loop:true;loopoffsety:140sh;loopduration:14000;loopstartat:allinend + 8000;looprotate:random(-60,60);loopcount:-1;looptransformperspective:2000;parallax:true;parallaxlevel:20;position:fixed;">
+							<img width="600" height="338" src="images/prueba2/cab-estruc-5.jpg" class="ls-l" alt="" sizes="(max-width: 600px) 100vw, 600px" style="box-shadow: 0 10px 30px rgba(0,0,0,.4);top:-20%;left:70%;text-align:initial;font-weight:400;font-style:normal;text-decoration:none;border-radius:10px;style:box-shadow: 0 10px 30px rgba(0,0,0,.4);;" data-ls="showinfo:1;durationin:0;delayin:2000;offsetxout:-70sw;easingout:easeInBack;rotateout:-4;skewxout:21;loop:true;loopoffsety:140sh;loopduration:13250;loopstartat:allinend + 3000;looprotate:random(-60,60);loopcount:-1;looptransformperspective:2000;parallax:true;parallaxlevel:20;position:fixed;">
+							<img width="600" height="338" src="images/prueba2/cab-estruc-4.jpg" class="ls-l" alt="" sizes="(max-width: 600px) 100vw, 600px" style="box-shadow: 0 10px 30px rgba(0,0,0,.4);top:-20%;left:40%;text-align:initial;font-weight:400;font-style:normal;text-decoration:none;border-radius:10px;style:box-shadow: 0 10px 30px rgba(0,0,0,.4);;" data-ls="showinfo:1;durationin:0;delayin:2000;offsetxout:-80sw;easingout:easeInBack;rotateout:-4;skewxout:24;loop:true;loopoffsety:140sh;loopduration:13500;loopstartat:allinend + 6000;looprotate:random(-60,60);loopcount:-1;looptransformperspective:2000;parallax:true;parallaxlevel:25;position:fixed;">
+							<img width="600" height="338" src="images/prueba2/fibra-opt-5.jpg" class="ls-l" alt="" sizes="(max-width: 600px) 100vw, 600px" style="box-shadow: 0 10px 30px rgba(0,0,0,.4);top:-20%;left:60%;text-align:initial;font-weight:400;font-style:normal;text-decoration:none;border-radius:10px;style:box-shadow: 0 10px 30px rgba(0,0,0,.4);;" data-ls="showinfo:1;durationin:0;delayin:2000;offsetxout:-90sw;easingout:easeInBack;rotateout:-5;skewxout:27;loop:true;loopoffsety:140sh;loopduration:12000;loopstartat:allinend + 7000;looprotate:random(-60,60);loopcount:-1;looptransformperspective:2000;parallax:true;parallaxlevel:25;position:fixed;">
+							<img width="600" height="338" src="images/prueba2/electri-8.png" class="ls-l" alt="" sizes="(max-width: 600px) 100vw, 600px" style="box-shadow: 0 10px 30px rgba(0,0,0,.4);top:-20%;left:50%;text-align:initial;font-weight:400;font-style:normal;text-decoration:none;border-radius:10px;style:box-shadow: 0 0 50px rgba(0,0,0,.2);;" data-ls="showinfo:1;durationin:0;delayin:2000;offsetxout:-100sw;easingout:easeInBack;rotateout:-5;skewxout:30;loop:true;loopoffsety:140sh;loopduration:13000;loopstartat:allinend + 0;looprotate:random(-60,60);loopcount:-1;looptransformperspective:2000;parallax:true;parallaxlevel:30;position:fixed;">
+						</div>
+					</div>				
+				</div>
+				<section id="home-welcome">
+					<div class="outer">
+						<div class="sizer">
+							<div class="inner">
+								<!-- <h1>6</h1> --><h2>Bienvenidos a Redes Gesa!</h2>
+								<p>LayerSlider is a premium multi-purpose animation platform. Sliders, image galleries, slideshows with mind-blowing effects, landing pages, animated page blocks, or even a full website can be created using LayerSlider 6.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="home-why">
+					<div class="outer">
+						<div class="sizer">
+							<div class="inner">
+								<h2 class="center">Porque dejar tu Seguridad a Redes Gesa?</h2>
+								<p class="center nopadding">¡ Te mostramos algunas razones !</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				
+				<!-- <h2>Premium Features</h2> -->
+				<div style="background-color: #03121d;">
+					<div id="layerslider_113" class="ls-wp-container fitvidsignore" style="width:1000px;height:300px;max-width:1000px;margin:0 auto;margin-bottom: 40px;">
+						<div class="ls-slide" data-ls="duration:2500;globalhover:true;overflow:true;kenburnsscale:1.2;">
+							<div style="top:19px;left:50%;text-align:initial;font-weight:400;font-style:normal;text-decoration:none;mix-blend-mode:normal;height:100%;width:60%;border-bottom:2px solid rgba(255,255,255,.2);" class="ls-l" data-ls="showinfo:1;durationin:1500;delayin:500;fadein:false;scalexin:0;"></div>
+							<div style="top:0px;left:0px;text-align:initial;font-weight:400;font-style:normal;text-decoration:none;mix-blend-mode:normal;width:100%;height:100%;border-radius:16px;background:#ffffff;opacity:0;" class="ls-l" data-ls="showinfo:1;hover:true;hoveropacity:.05;hoverscalex:1.1;hovertransformorigin:slidercenter slidermiddle 0;"></div>
+							<p style="top:72px;left:410px;text-align:initial;font-weight:400;font-style:normal;text-decoration:none;mix-blend-mode:normal;font-family:Nunito;color:rgba(255, 255, 255, 0.85);font-size:30px;" class="ls-l" data-ls="showinfo:1;offsetxin:50;durationin:1500;delayin:250;easingin:easeOutQuint;hover:true;hoverrotatey:-5;hovertransformorigin:left slidermiddle 0;static:forever;">Template Store</p>
+							<p style="top:132px;left:410px;text-align:justify;font-weight:300;font-style:normal;text-decoration:none;mix-blend-mode:normal;font-family:Nunito;color:rgba(255, 255, 255, 0.65);font-size:18px;width:540px;white-space:normal;" class="ls-l" data-ls="showinfo:1;offsetyin:50;durationin:1500;delayin:500;easingin:easeOutQuint;hover:true;hoverrotatey:-5;hovertransformorigin:left slidermiddle 0;static:forever;">The ever growing selection of fully crafted, customizable and importable slider templates are an ideal starting point for new projects and they cover every common use case from personal to corporate business.</p>
+							<img width="400" height="300" src="../../cdn6.kreaturamedia.com/wp-content/uploads/2017/06/premium-feature-templatestore.png" class="ls-l" alt="" srcset="https://cdn6.kreaturamedia.com/wp-content/uploads/2017/06/premium-feature-templatestore.png 400w, https://cdn6.kreaturamedia.com/wp-content/uploads/2017/06/premium-feature-templatestore-300x225.png 300w" sizes="(max-width: 400px) 100vw, 400px" style="top:0px;left:0px;text-align:initial;font-weight:400;font-style:normal;text-decoration:none;mix-blend-mode:normal;" data-ls="showinfo:1;offsetxin:-100;durationin:1500;easingin:easeOutQuint;hover:true;hoverrotatey:5;hovertransformorigin:right 50%;"><a href="../sliders/index.html" target="_self" class="ls-link ls-link-on-top"></a>
+						</div>
+					</div>
+					<div id="layerslider_112" class="ls-wp-container fitvidsignore" style="width:1000px;height:300px;max-width:1000px;margin:0 auto;margin-bottom: 40px;">
+						<div class="ls-slide" data-ls="duration:2500;globalhover:true;overflow:true;kenburnsscale:1.2;">
+							<div style="top:19px;left:50%;text-align:initial;font-weight:400;font-style:normal;text-decoration:none;mix-blend-mode:normal;height:100%;width:60%;border-bottom:2px solid rgba(255,255,255,.2);" class="ls-l" data-ls="showinfo:1;durationin:1500;delayin:500;fadein:false;scalexin:0;">
+							</div>
+							<div style="top:0px;left:0px;text-align:initial;font-weight:400;font-style:normal;text-decoration:none;mix-blend-mode:normal;width:100%;height:100%;border-radius:16px;background:#ffffff;opacity:0;" class="ls-l" data-ls="showinfo:1;hover:true;hoveropacity:.05;hoverscalex:1.1;hovertransformorigin:slidercenter slidermiddle 0;"></div>
+								<p style="top:48px;left:410px;text-align:initial;font-weight:400;font-style:normal;text-decoration:none;mix-blend-mode:normal;font-family:Nunito;color:rgba(255, 255, 255, 0.85);font-size:30px;" class="ls-l" data-ls="showinfo:1;offsetxin:50;durationin:1500;delayin:250;easingin:easeOutQuint;hover:true;hoverrotatey:-5;hovertransformorigin:left slidermiddle 0;static:forever;">LayerSlider Popups</p>
+								<p style="top:108px;left:410px;text-align:justify;font-weight:300;font-style:normal;text-decoration:none;mix-blend-mode:normal;font-family:Nunito;color:rgba(255, 255, 255, 0.65);font-size:18px;width:540px;white-space:normal;" class="ls-l" data-ls="showinfo:1;offsetyin:50;durationin:1500;delayin:500;easingin:easeOutQuint;hover:true;hoverrotatey:-5;hovertransformorigin:left slidermiddle 0;static:forever;">Popups is a completely new way of using LayerSlider and it greatly extends its capabilities and what you can build with the plugin. Combining our strong foundation and the vast number of features we already have with the newly introduced Popup feature makes LayerSlider one of the best choice among popup plugins.</p>
+								<img width="400" height="300" src="../../cdn5.kreaturamedia.com/wp-content/uploads/2017/06/premium-feature-popups.png" class="ls-l" alt="" srcset="https://cdn5.kreaturamedia.com/wp-content/uploads/2017/06/premium-feature-popups.png 400w, https://cdn8.kreaturamedia.com/wp-content/uploads/2017/06/premium-feature-popups-300x225.png 300w" sizes="(max-width: 400px) 100vw, 400px" style="top:0px;left:0px;text-align:initial;font-weight:400;font-style:normal;text-decoration:none;mix-blend-mode:normal;" data-ls="showinfo:1;offsetxin:-100;durationin:1500;easingin:easeOutQuint;hover:true;hoverrotatey:5;hovertransformorigin:right 50%;">
+								<a href="../features/popups/index.html" target="_self" class="ls-link ls-link-on-top"></a>
+						</div>
+					</div>
+					<div id="layerslider_110" class="ls-wp-container fitvidsignore" style="width:1000px;height:300px;max-width:1000px;margin:0 auto;margin-bottom: 40px;">
+						<div class="ls-slide" data-ls="duration:2500;globalhover:true;overflow:true;kenburnsscale:1.2;">
+							<div style="top:19px;left:50%;text-align:initial;font-weight:400;font-style:normal;text-decoration:none;mix-blend-mode:normal;height:100%;width:60%;border-bottom:2px solid rgba(255,255,255,.2);" class="ls-l" data-ls="showinfo:1;durationin:1500;delayin:500;fadein:false;scalexin:0;">
+							</div>
+							<div style="top:0px;left:0px;text-align:initial;font-weight:400;font-style:normal;text-decoration:none;mix-blend-mode:normal;width:100%;height:100%;border-radius:16px;background:#ffffff;opacity:0;" class="ls-l" data-ls="showinfo:1;hover:true;hoveropacity:.05;hoverscalex:1.1;hovertransformorigin:slidercenter slidermiddle 0;">
+							</div>
+							<p style="top:48px;left:410px;text-align:initial;font-weight:400;font-style:normal;text-decoration:none;mix-blend-mode:normal;font-family:Nunito;color:rgba(255, 255, 255, 0.85);font-size:30px;" class="ls-l" data-ls="showinfo:1;offsetxin:50;durationin:1500;delayin:250;easingin:easeOutQuint;hover:true;hoverrotatey:-5;hovertransformorigin:left slidermiddle 0;static:forever;">Revisions</p><p style="top:108px;left:410px;text-align:justify;font-weight:300;font-style:normal;text-decoration:none;mix-blend-mode:normal;font-family:Nunito;color:rgba(255, 255, 255, 0.65);font-size:18px;width:540px;white-space:normal;" class="ls-l" data-ls="showinfo:1;offsetyin:50;durationin:1500;delayin:500;easingin:easeOutQuint;hover:true;hoverrotatey:-5;hovertransformorigin:left slidermiddle 0;static:forever;">Have a peace of mind knowing that your slider edits are always safe and you can revert back unwanted changes or faulty saves at any time. Revisions serves not just as a backup solution, but a complete version control system where you can visually compare the changes you have made along the way. Supported platforms: WordPress</p>
+							<img width="400" height="300" src="../../cdn8.kreaturamedia.com/wp-content/uploads/2017/06/premium-feature-revisions.png" class="ls-l" alt="" srcset="https://cdn8.kreaturamedia.com/wp-content/uploads/2017/06/premium-feature-revisions.png 400w, https://cdn8.kreaturamedia.com/wp-content/uploads/2017/06/premium-feature-revisions-300x225.png 300w" sizes="(max-width: 400px) 100vw, 400px" style="top:50%;left:0%;text-align:initial;font-weight:400;font-style:normal;text-decoration:none;mix-blend-mode:normal;" data-ls="showinfo:1;offsetxin:-100;durationin:1500;easingin:easeOutQuint;hover:true;hoverrotatey:5;hovertransformorigin:right 50%;"><a href="../features/revisions/index.html" target="_self" class="ls-link ls-link-on-top"></a>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+		<!-- PRUEBA -->
 		<!-- Hero -->
 			<section class="hero slide story" id="hero" data-slide="1">
 				<div class="container text-center">
@@ -307,10 +477,6 @@
 					    <p class="tagline animated Up">
 					      	Una empresa con mucha seguridad
 					    </p>
-					    
-					    <!-- <a class="btn btn-full" href="#about">
-					    	Comienza ahora
-					    </a> -->
 				  	</div>
 				</div>
 			</section>
@@ -839,5 +1005,103 @@
 		  	<a class="scrolltop" href="#"><span class="fa fa-angle-up"></span></a>
 		<!-- Footer -->
 		<script src="js/animated.js"></script>
+		<script type='text/javascript' src='css/layer/js/km-uic66d.js'></script>
+				<script type='text/javascript'>
+					var KM={"isHome":"1","page":"layerslider-responsive-wordpress-slider-plugin"};
+				</script>
+				<script type='text/javascript' src='css/layer/js/scriptc66d.js'></script>
+				<script type='text/javascript'>
+					var LS_Meta={"v":"6.7.5"};
+				</script>
+				<script type='text/javascript' src='css/layer/js/greensockb3a6.js'></script> 
+				<script type='text/javascript' src='css/layer/js/layerslider.kreaturamedia.jqueryd70e.js'></script> 
+				<script type='text/javascript'>
+					/*<![CDATA[*/
+					var lsjQuery=jQuery;lsjQuery(document).ready(function(){
+						if(typeof lsjQuery.fn.layerSlider=="undefined"){
+							if(window._layerSlider&&window._layerSlider.showNotice){
+								window._layerSlider.showNotice('layerslider_50','jquery');
+							}
+						}else{
+							lsjQuery("#layerslider_50").layerSlider({sliderVersion:'6.5.7',type:'fullsize',autoStart:false,skin:'v6',globalBGColor:'#000000',globalBGAttachment:'fixed',globalBGSize:'cover',navPrevNext:false,hoverPrevNext:false,navStartStop:false,showCircleTimer:false,thumbnailNavigation:'disabled',skinsPath:'skins/skin.css',height:1500});
+						}
+					});
+					var lsjQuery = jQuery;
+					lsjQuery(document).ready(function() {
+					    if (typeof lsjQuery.fn.layerSlider == "undefined") {
+					        if (window._layerSlider && window._layerSlider.showNotice) {
+					            window._layerSlider.showNotice('layerslider_113', 'jquery');
+					        }
+					    } else {
+					        lsjQuery("#layerslider_113").layerSlider({
+					            sliderVersion: '6.5.7',
+					            allowFullscreen: false,
+					            pauseOnHover: 'disabled',
+					            keybNav: false,
+					            touchNav: false,
+					            skin: 'noskin',
+					            globalBGColor: '#03121d',
+					            globalBGSize: 'cover',
+					            navPrevNext: false,
+					            hoverPrevNext: false,
+					            navStartStop: false,
+					            navButtons: false,
+					            showCircleTimer: false,
+					            skinsPath: 'https://layerslider.kreaturamedia.com/wp-content/plugins/LayerSlider/static/layerslider/skins/'
+					        });
+					    }
+					});
+					var lsjQuery = jQuery;
+					lsjQuery(document).ready(function() {
+					    if (typeof lsjQuery.fn.layerSlider == "undefined") {
+					        if (window._layerSlider && window._layerSlider.showNotice) {
+					            window._layerSlider.showNotice('layerslider_112', 'jquery');
+					        }
+					    } else {
+					        lsjQuery("#layerslider_112").layerSlider({
+					            sliderVersion: '6.5.0b2',
+					            allowFullscreen: false,
+					            pauseOnHover: 'disabled',
+					            keybNav: false,
+					            touchNav: false,
+					            skin: 'noskin',
+					            globalBGColor: '#03121d',
+					            globalBGSize: 'cover',
+					            navPrevNext: false,
+					            hoverPrevNext: false,
+					            navStartStop: false,
+					            navButtons: false,
+					            showCircleTimer: false,
+					            skinsPath: 'https://layerslider.kreaturamedia.com/wp-content/plugins/LayerSlider/static/layerslider/skins/'
+					        });
+					    }
+					});
+					var lsjQuery = jQuery;
+					lsjQuery(document).ready(function() {
+					    if (typeof lsjQuery.fn.layerSlider == "undefined") {
+					        if (window._layerSlider && window._layerSlider.showNotice) {
+					            window._layerSlider.showNotice('layerslider_110', 'jquery');
+					        }
+					    } else {
+					        lsjQuery("#layerslider_110").layerSlider({
+					            sliderVersion: '6.5.7',
+					            allowFullscreen: false,
+					            pauseOnHover: 'disabled',
+					            keybNav: false,
+					            touchNav: false,
+					            skin: 'noskin',
+					            globalBGColor: '#03121d',
+					            globalBGSize: 'cover',
+					            navPrevNext: false,
+					            hoverPrevNext: false,
+					            navStartStop: false,
+					            navButtons: false,
+					            showCircleTimer: false,
+					            skinsPath: 'https://layerslider.kreaturamedia.com/wp-content/plugins/LayerSlider/static/layerslider/skins/'
+					        });
+					    }
+					});
+					/*]]>*/
+				</script> 
 	</body>
 </html>

@@ -115,5 +115,4 @@ $(document).ready(function() {
     }, 1000, 'easeInOutExpo');
     return false;
   });
-
 });
